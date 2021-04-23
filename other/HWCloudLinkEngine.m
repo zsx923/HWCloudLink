@@ -84,7 +84,7 @@ static HWCloudLinkEngine *instance = nil;
     
     SessionManager.shared.isCameraOpen = cameraEnable;
     SessionManager.shared.isMicrophoneOpen = microEnable;
-    [[NSUserDefaults standardUserDefaults] setBool:microEnable forKey:GlobalDefines.shared.CurrentUserCameraStatus];
+    [[NSUserDefaults standardUserDefaults] setBool:microEnable forKey:GlobalDefines.shared.CurrentUserMicrophoneStatus];
     [[NSUserDefaults standardUserDefaults] setBool:cameraEnable forKey:GlobalDefines.shared.CurrentUserCameraStatus];
     
     NSMutableArray *attendeeArray = [NSMutableArray new];

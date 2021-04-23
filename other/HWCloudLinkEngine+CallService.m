@@ -102,7 +102,7 @@
     }
 
     [ManagerService.callService switchCameraOpen:SessionManager.shared.isCameraOpen callId:callInfo.stateInfo.callId];
-    [ManagerService.callService muteMic:SessionManager.shared.isMicrophoneOpen callId:callInfo.stateInfo.callId];
+    [ManagerService.callService muteMic:!SessionManager.shared.isMicrophoneOpen callId:callInfo.stateInfo.callId];
     
     if (!SessionManager.shared.isCurrentMeeting)
     {
@@ -165,8 +165,12 @@
 
 - (void)callingDestoryedNotification:(NSNotification *)notification
 {
+    if ([self respondsToSelector:@selector(endlocalTimeout)])
+    {
+        [self performSelector:@selector(endlocalTimeout)];
+    }
+    
     [TranslateBridge CLLogWithMessage:@"会议销毁通知"];
-//    stopAbnormalTimer()
     [MBProgressHUD hideHUD];
     self.isJoining = NO;
     [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"aux_rec"];
