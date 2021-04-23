@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="84" id="KGk-i7-Jjw" customClass="TableNameFieldCell" customModule="HWCloudLink" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="401" height="84"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="401" height="84"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUH-KI-9qd">
+                        <rect key="frame" x="16" y="9" width="370" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="VXd-yG-L7m"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" name="table_cell_title2"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入姓名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v1O-op-ZLL" customClass="NoCopyTextField" customModule="HWCloudLink" customModuleProvider="target">
+                        <rect key="frame" x="16" y="27" width="370" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="34" id="QLA-DR-D6P"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZXv-zK-itF">
+                        <rect key="frame" x="16" y="64" width="369" height="0.5"/>
+                        <color key="backgroundColor" name="table_line"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="ZIK-fj-WDl"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ZXv-zK-itF" firstAttribute="top" secondItem="v1O-op-ZLL" secondAttribute="bottom" constant="3" id="1ba-wY-hW9"/>
+                    <constraint firstItem="v1O-op-ZLL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="MsW-U5-Uvk"/>
+                    <constraint firstItem="FUH-KI-9qd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Tz2-Gm-Gjh"/>
+                    <constraint firstAttribute="trailing" secondItem="FUH-KI-9qd" secondAttribute="trailing" constant="15" id="Uud-EW-vcs"/>
+                    <constraint firstItem="FUH-KI-9qd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="bNM-bh-ZgI"/>
+                    <constraint firstItem="ZXv-zK-itF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="bT1-Z5-79V"/>
+                    <constraint firstItem="v1O-op-ZLL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="27" id="lYa-Ty-yZ9"/>
+                    <constraint firstAttribute="trailing" secondItem="v1O-op-ZLL" secondAttribute="trailing" constant="15" id="lau-jq-89j"/>
+                    <constraint firstAttribute="trailing" secondItem="ZXv-zK-itF" secondAttribute="trailing" constant="16" id="qnl-fa-rln"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="buttomLine" destination="ZXv-zK-itF" id="nbt-2K-Bhx"/>
+                <outlet property="showInputTextField" destination="v1O-op-ZLL" id="5Xo-7X-CZI"/>
+                <outlet property="showTitleLabel" destination="FUH-KI-9qd" id="MgJ-A2-x20"/>
+            </connections>
+            <point key="canvasLocation" x="128.2608695652174" y="137.27678571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="table_cell_title2">
+            <color red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="table_line">
+            <color red="0.91399997472763062" green="0.91399997472763062" blue="0.91399997472763062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

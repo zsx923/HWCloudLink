@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="tyB-Rc-hjC" customClass="MeetingDetailFooterView" customModule="HWCloudLink" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBP-Ba-AGE">
+                    <rect key="frame" x="20" y="76" width="374" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="1Tt-eP-evg"/>
+                    </constraints>
+                    <state key="normal" title="加入会议"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CbM-Tz-E4b">
+                    <rect key="frame" x="20" y="12" width="374" height="44"/>
+                    <state key="normal" title="预约会议"/>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="GlA-Mj-JjM"/>
+            <color key="backgroundColor" name="table_bg"/>
+            <constraints>
+                <constraint firstItem="CbM-Tz-E4b" firstAttribute="leading" secondItem="GlA-Mj-JjM" secondAttribute="leading" constant="20" id="0nW-fe-EXW"/>
+                <constraint firstItem="GlA-Mj-JjM" firstAttribute="trailing" secondItem="CbM-Tz-E4b" secondAttribute="trailing" constant="20" id="2xN-f6-g0L"/>
+                <constraint firstItem="pBP-Ba-AGE" firstAttribute="top" secondItem="CbM-Tz-E4b" secondAttribute="bottom" constant="20" id="FTq-t3-sgh"/>
+                <constraint firstItem="GlA-Mj-JjM" firstAttribute="trailing" secondItem="pBP-Ba-AGE" secondAttribute="trailing" constant="20" id="SbB-ga-lS2"/>
+                <constraint firstItem="CbM-Tz-E4b" firstAttribute="height" secondItem="pBP-Ba-AGE" secondAttribute="height" id="ed5-mh-IRV"/>
+                <constraint firstItem="GlA-Mj-JjM" firstAttribute="bottom" secondItem="pBP-Ba-AGE" secondAttribute="bottom" constant="20" id="pD0-gB-VHN"/>
+                <constraint firstItem="pBP-Ba-AGE" firstAttribute="leading" secondItem="GlA-Mj-JjM" secondAttribute="leading" constant="20" id="ywF-9f-ysh"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="cancelMeetingBtn" destination="CbM-Tz-E4b" id="fM9-bh-HVL"/>
+                <outlet property="joinMeetingBtn" destination="pBP-Ba-AGE" id="K7r-BL-uun"/>
+            </connections>
+            <point key="canvasLocation" x="-10" y="-550"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="table_bg">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

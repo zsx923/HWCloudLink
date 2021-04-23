@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="YVh-wL-yWj" userLabel="SVCMeetOneEAGLViewCell" customClass="SVCMeetOneEAGLViewCell" customModule="HWCloudLink" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="227" height="374"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="227" height="374"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IC9-YG-Hcm">
+                        <rect key="frame" x="0.0" y="0.0" width="227" height="374"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GfP-w5-FZI">
+                                <rect key="frame" x="5" y="374" width="0.0" height="0.0"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.39768835616438358" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="rH2-83-u6d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tup_call_loading_img.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="lJ9-5b-YMV">
+                                <rect key="frame" x="0.0" y="0.0" width="227" height="374"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="lJ9-5b-YMV" firstAttribute="top" secondItem="IC9-YG-Hcm" secondAttribute="top" id="3Sr-eT-XSt"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GfP-w5-FZI" secondAttribute="trailing" constant="5" id="Cry-LQ-Yz4"/>
+                            <constraint firstAttribute="bottom" secondItem="lJ9-5b-YMV" secondAttribute="bottom" id="JOm-s3-HbI"/>
+                            <constraint firstItem="lJ9-5b-YMV" firstAttribute="leading" secondItem="IC9-YG-Hcm" secondAttribute="leading" id="cQ5-zb-MjA"/>
+                            <constraint firstAttribute="trailing" secondItem="lJ9-5b-YMV" secondAttribute="trailing" id="eFM-fZ-MPL"/>
+                            <constraint firstItem="GfP-w5-FZI" firstAttribute="leading" secondItem="IC9-YG-Hcm" secondAttribute="leading" constant="5" id="gqB-rz-raw"/>
+                            <constraint firstAttribute="bottom" secondItem="GfP-w5-FZI" secondAttribute="bottom" id="tIa-sv-7zW"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="XNN-kf-Olk"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="IC9-YG-Hcm" firstAttribute="top" secondItem="YVh-wL-yWj" secondAttribute="top" id="2w1-VI-sPY"/>
+                <constraint firstAttribute="trailing" secondItem="IC9-YG-Hcm" secondAttribute="trailing" id="Md5-e0-Vuj"/>
+                <constraint firstAttribute="bottom" secondItem="IC9-YG-Hcm" secondAttribute="bottom" id="Tlc-wj-9kR"/>
+                <constraint firstItem="IC9-YG-Hcm" firstAttribute="leading" secondItem="YVh-wL-yWj" secondAttribute="leading" id="Xuw-IC-a4n"/>
+            </constraints>
+            <size key="customSize" width="227" height="374"/>
+            <connections>
+                <outlet property="backView" destination="IC9-YG-Hcm" id="fm5-mN-sxI"/>
+                <outlet property="nameLabel" destination="GfP-w5-FZI" id="H5A-ad-l9Q"/>
+                <outlet property="nameLabelBottomMargin" destination="tIa-sv-7zW" id="jfJ-7K-gn8"/>
+                <outlet property="videoBottomMargin" destination="Tlc-wj-9kR" id="SqO-U1-NT4"/>
+                <outlet property="videoTopImageView" destination="lJ9-5b-YMV" id="afa-6P-MJR"/>
+                <outlet property="videoTopMargin" destination="2w1-VI-sPY" id="8Kf-rb-ZWh"/>
+            </connections>
+            <point key="canvasLocation" x="197.82608695652175" y="-24.107142857142858"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="tup_call_loading_img.jpg" width="1280" height="720"/>
+    </resources>
+</document>

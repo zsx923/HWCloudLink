@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="TableJoinUserCell" customModule="HWCloudLink" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5aZ-4g-I8y">
+                        <rect key="frame" x="16" y="16" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="2Sm-Wl-z1e"/>
+                            <constraint firstAttribute="height" constant="40" id="3ap-3O-KRy"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLp-OT-Zgs">
+                        <rect key="frame" x="69" y="13.5" width="246" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="xh9-6d-MFh"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdp-Sn-LnS">
+                        <rect key="frame" x="69" y="38" width="35.5" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="cqR-oz-t0G"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSj-6d-8CM">
+                        <rect key="frame" x="373" y="23.5" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="VlW-Pe-Lwc"/>
+                            <constraint firstAttribute="height" constant="25" id="x2s-wh-lx6"/>
+                        </constraints>
+                        <state key="normal" image="meeting_user_join_voice"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3PC-CQ-hYL">
+                        <rect key="frame" x="318" y="23.5" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="5EZ-Ue-5Uf"/>
+                            <constraint firstAttribute="height" constant="25" id="d9Y-DT-JfB"/>
+                        </constraints>
+                        <state key="normal" image="session_join_handup"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="RLp-OT-Zgs" firstAttribute="leading" secondItem="5aZ-4g-I8y" secondAttribute="trailing" constant="13" id="0S7-ob-HFT"/>
+                    <constraint firstItem="RLp-OT-Zgs" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="-12" id="2N7-GO-W8j"/>
+                    <constraint firstItem="3PC-CQ-hYL" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="7Cw-v9-Jzr"/>
+                    <constraint firstItem="BSj-6d-8CM" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="HAP-HJ-bBa"/>
+                    <constraint firstAttribute="bottom" secondItem="wdp-Sn-LnS" secondAttribute="bottom" constant="13" id="PBE-Ba-gaO"/>
+                    <constraint firstItem="wdp-Sn-LnS" firstAttribute="leading" secondItem="5aZ-4g-I8y" secondAttribute="trailing" constant="13" id="REe-Pc-rJr"/>
+                    <constraint firstItem="5aZ-4g-I8y" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Zz0-Jp-zB2"/>
+                    <constraint firstItem="3PC-CQ-hYL" firstAttribute="leading" secondItem="RLp-OT-Zgs" secondAttribute="trailing" constant="3" id="a5e-ve-V51"/>
+                    <constraint firstItem="BSj-6d-8CM" firstAttribute="leading" secondItem="3PC-CQ-hYL" secondAttribute="trailing" constant="30" id="cFa-mh-1LQ"/>
+                    <constraint firstItem="5aZ-4g-I8y" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="cMk-Re-QgZ"/>
+                    <constraint firstAttribute="trailing" secondItem="BSj-6d-8CM" secondAttribute="trailing" constant="16" id="hT9-hV-Uhd"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="showHandUpBtn" destination="3PC-CQ-hYL" id="Umq-BL-QNU"/>
+                <outlet property="showImageView" destination="5aZ-4g-I8y" id="juF-xH-WOz"/>
+                <outlet property="showSubTitleLabel" destination="wdp-Sn-LnS" id="kY3-oM-PU2"/>
+                <outlet property="showTitleLabel" destination="RLp-OT-Zgs" id="1H0-sX-Ra4"/>
+                <outlet property="showTitleRightConstraint" destination="a5e-ve-V51" id="3hA-2b-ev3"/>
+                <outlet property="showTitleVCenterConstraint" destination="2N7-GO-W8j" id="QEN-z0-Nk3"/>
+                <outlet property="showVoiceBtn" destination="BSj-6d-8CM" id="bmP-uW-x2N"/>
+            </connections>
+            <point key="canvasLocation" x="140.57971014492756" y="150"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="meeting_user_join_voice" width="25" height="25"/>
+        <image name="session_join_handup" width="24" height="24"/>
+    </resources>
+</document>

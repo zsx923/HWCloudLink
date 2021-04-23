@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NumberKeyboardController" customModule="HWCloudLink" customModuleProvider="target">
+            <connections>
+                <outlet property="backView" destination="qsX-lO-3fQ" id="0pX-Mv-Ey1"/>
+                <outlet property="bgView" destination="6hz-Lk-8JH" id="Ti3-xP-joV"/>
+                <outlet property="flowLayout" destination="neu-aP-pX5" id="dOp-xE-IWU"/>
+                <outlet property="keyboardCollectionView" destination="zjE-pX-4EY" id="6Oo-Yi-Rph"/>
+                <outlet property="textField" destination="qd8-2S-5jL" id="7YW-5F-IpA"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.75" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="zjE-pX-4EY">
+                    <rect key="frame" x="0.0" y="726" width="414" height="170"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="170" id="Jt4-Vd-cIz"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="neu-aP-pX5">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="fUv-6a-UjF"/>
+                        <outlet property="delegate" destination="-1" id="N8G-Wm-xO6"/>
+                    </connections>
+                </collectionView>
+                <view alpha="0.75" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hz-Lk-8JH">
+                    <rect key="frame" x="0.0" y="636" width="414" height="90"/>
+                    <subviews>
+                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qd8-2S-5jL">
+                            <rect key="frame" x="0.0" y="26.5" width="350" height="43.5"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gXZ-2Q-aBL">
+                            <rect key="frame" x="16" y="79" width="382" height="1"/>
+                            <color key="backgroundColor" systemColor="systemGrayColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="eNY-xD-CEJ"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PgP-sT-Pdk">
+                            <rect key="frame" x="360" y="36.5" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="Ch6-ye-8pw"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="OMG-OF-g5I"/>
+                                <constraint firstAttribute="width" constant="24" id="QgP-gn-0wA"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="24" id="VSb-x4-VY5"/>
+                            </constraints>
+                            <state key="normal" image="password_eye"/>
+                            <state key="selected" image="password_eye_open"/>
+                            <connections>
+                                <action selector="eyeButtonClick:" destination="-1" eventType="touchUpInside" id="4DF-WJ-5Ut"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="gXZ-2Q-aBL" firstAttribute="leading" secondItem="6hz-Lk-8JH" secondAttribute="leading" constant="16" id="59T-Rg-MBn"/>
+                        <constraint firstAttribute="trailing" secondItem="gXZ-2Q-aBL" secondAttribute="trailing" constant="16" id="CQM-h1-3bI"/>
+                        <constraint firstAttribute="bottom" secondItem="gXZ-2Q-aBL" secondAttribute="bottom" constant="10" id="MaO-Gx-yTv"/>
+                        <constraint firstAttribute="trailing" secondItem="PgP-sT-Pdk" secondAttribute="trailing" constant="30" id="Oot-Ec-O0b"/>
+                        <constraint firstItem="qd8-2S-5jL" firstAttribute="leading" secondItem="6hz-Lk-8JH" secondAttribute="leading" id="Smq-I6-hhe"/>
+                        <constraint firstAttribute="height" constant="90" id="Tkf-xW-dUV"/>
+                        <constraint firstAttribute="bottom" secondItem="qd8-2S-5jL" secondAttribute="bottom" constant="20" id="hf9-cK-0hC"/>
+                        <constraint firstItem="PgP-sT-Pdk" firstAttribute="leading" secondItem="qd8-2S-5jL" secondAttribute="trailing" constant="10" id="lQN-9M-V7h"/>
+                        <constraint firstItem="PgP-sT-Pdk" firstAttribute="centerY" secondItem="qd8-2S-5jL" secondAttribute="centerY" id="pCm-PO-lN2"/>
+                    </constraints>
+                </view>
+                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qsX-lO-3fQ">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="636"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="6hz-Lk-8JH" firstAttribute="top" secondItem="qsX-lO-3fQ" secondAttribute="bottom" id="380-4c-8Ad"/>
+                <constraint firstItem="zjE-pX-4EY" firstAttribute="top" secondItem="6hz-Lk-8JH" secondAttribute="bottom" id="6Ib-UU-rGo"/>
+                <constraint firstAttribute="trailing" secondItem="qsX-lO-3fQ" secondAttribute="trailing" id="CRi-bk-oSf"/>
+                <constraint firstItem="qsX-lO-3fQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="FeS-ld-8eq"/>
+                <constraint firstItem="zjE-pX-4EY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Pij-vV-rEU"/>
+                <constraint firstAttribute="trailing" secondItem="6hz-Lk-8JH" secondAttribute="trailing" id="Qc7-mL-Jh6"/>
+                <constraint firstItem="6hz-Lk-8JH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Qvf-5Y-XYL"/>
+                <constraint firstAttribute="bottom" secondItem="zjE-pX-4EY" secondAttribute="bottom" id="grb-N3-zjJ"/>
+                <constraint firstAttribute="trailing" secondItem="zjE-pX-4EY" secondAttribute="trailing" id="tu6-zv-WPg"/>
+                <constraint firstItem="qsX-lO-3fQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uKB-g0-0FM"/>
+            </constraints>
+            <point key="canvasLocation" x="114" y="126"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="password_eye" width="24" height="24"/>
+        <image name="password_eye_open" width="24" height="24"/>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

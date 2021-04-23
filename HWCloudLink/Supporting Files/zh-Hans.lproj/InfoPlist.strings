@@ -1,0 +1,14 @@
+/* 
+  InfoPlist.strings
+  HWCloudLink
+
+  Created by wangyh on 2020/11/23.
+  Copyright © 2020 陈帆. All rights reserved.
+*/
+CFBundleDisplayName = "HW CloudLink";
+//NSAppleMusicUsageDescription = "媒体库";
+//NSContactsUsageDescription = "通讯录";
+NSCameraUsageDescription = "App需要您的同意，才能访问相机，以便您拍照上传图片。";
+NSLocalNetworkUsageDescription = "使用音视频通话功能，需要您开启此权限。";
+NSMicrophoneUsageDescription = "App需要您的同意，才能访问麦克风，以便您语音聊天。";
+NSPhotoLibraryUsageDescription = "App需要您的同意，才能访问相册，以便您上传图片。";

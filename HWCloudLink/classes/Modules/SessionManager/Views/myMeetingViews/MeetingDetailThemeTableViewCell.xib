@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="MeetingDetailThemeTableViewCell" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="MeetingDetailThemeTableViewCell" customModule="HWCloudLink" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d24-V0-hPp">
+                        <rect key="frame" x="10" y="0.0" width="300" height="120"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="会议主题" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="19g-ON-Cmp">
+                                <rect key="frame" x="127.5" y="22" width="65.5" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="m8q-QQ-cum"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="头脑风暴主题会议" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Jp-tt-wmb" customClass="ActionUILabel" customModule="HWCloudLink" customModuleProvider="target">
+                                <rect key="frame" x="20" y="56" width="260" height="50"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_meetdetail_video_press" translatesAutoresizingMaskIntoConstraints="NO" id="Bsv-ay-i8f">
+                                <rect key="frame" x="105.5" y="22" width="20" height="20"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstItem="19g-ON-Cmp" firstAttribute="leading" secondItem="Bsv-ay-i8f" secondAttribute="trailing" constant="2" id="DFM-fa-Cze"/>
+                            <constraint firstAttribute="bottom" secondItem="2Jp-tt-wmb" secondAttribute="bottom" constant="14" id="HJo-BK-ccA"/>
+                            <constraint firstItem="2Jp-tt-wmb" firstAttribute="top" secondItem="19g-ON-Cmp" secondAttribute="bottom" constant="14" id="VIN-Hc-ibf"/>
+                            <constraint firstItem="2Jp-tt-wmb" firstAttribute="leading" secondItem="d24-V0-hPp" secondAttribute="leading" constant="20" id="mfa-f5-hvL"/>
+                            <constraint firstItem="19g-ON-Cmp" firstAttribute="top" secondItem="d24-V0-hPp" secondAttribute="top" constant="22" id="qar-b8-L5E"/>
+                            <constraint firstAttribute="trailing" secondItem="2Jp-tt-wmb" secondAttribute="trailing" constant="20" id="sXq-Cf-ptK"/>
+                            <constraint firstItem="Bsv-ay-i8f" firstAttribute="centerY" secondItem="19g-ON-Cmp" secondAttribute="centerY" id="vPJ-Zl-pLY"/>
+                            <constraint firstItem="19g-ON-Cmp" firstAttribute="centerX" secondItem="d24-V0-hPp" secondAttribute="centerX" constant="10" id="wxg-mL-OKU"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="d24-V0-hPp" secondAttribute="bottom" constant="20" id="3J9-G1-Z4l"/>
+                    <constraint firstItem="d24-V0-hPp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Fx1-fT-bex"/>
+                    <constraint firstAttribute="trailing" secondItem="d24-V0-hPp" secondAttribute="trailing" constant="10" id="Z6s-0I-i26"/>
+                    <constraint firstItem="d24-V0-hPp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="cBs-3m-o2T"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="BottomView" destination="d24-V0-hPp" id="8zb-9e-xda"/>
+                <outlet property="ContentLabel" destination="2Jp-tt-wmb" id="Qb2-9t-cmi"/>
+                <outlet property="TitleLabel" destination="19g-ON-Cmp" id="6QD-hC-ftQ"/>
+                <outlet property="confTypeImageView" destination="Bsv-ay-i8f" id="3EX-w6-HqN"/>
+            </connections>
+            <point key="canvasLocation" x="-155.07246376811597" y="69.642857142857139"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_meetdetail_video_press" width="20" height="20"/>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

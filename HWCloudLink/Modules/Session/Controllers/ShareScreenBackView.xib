@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ShareScreenBackView" customModule="HWCloudLink" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您正在共享屏幕" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efh-c0-k5q">
+                    <rect key="frame" x="146" y="164" width="122" height="20.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="498-c3-tst">
+                    <rect key="frame" x="177" y="722" width="60" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="停止共享" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fk-PU-moH">
+                            <rect key="frame" x="0.0" y="30" width="60" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bottomicon_share1_press" translatesAutoresizingMaskIntoConstraints="NO" id="WCI-TM-rva">
+                            <rect key="frame" x="0.0" y="0.0" width="60" height="30"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ctl-MK-krW">
+                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                            <connections>
+                                <action selector="stopBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="ocY-hU-9je"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemRedColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="9PA-pz-JNH"/>
+                        <constraint firstItem="ctl-MK-krW" firstAttribute="leading" secondItem="498-c3-tst" secondAttribute="leading" id="AyZ-vH-MHX"/>
+                        <constraint firstAttribute="trailing" secondItem="WCI-TM-rva" secondAttribute="trailing" id="BZv-yg-5fg"/>
+                        <constraint firstItem="0fk-PU-moH" firstAttribute="height" secondItem="498-c3-tst" secondAttribute="height" multiplier="1/2" id="CfL-S0-318"/>
+                        <constraint firstAttribute="bottom" secondItem="0fk-PU-moH" secondAttribute="bottom" id="E0g-5F-5cH"/>
+                        <constraint firstItem="0fk-PU-moH" firstAttribute="leading" secondItem="498-c3-tst" secondAttribute="leading" id="Fmw-dP-uVg"/>
+                        <constraint firstAttribute="trailing" secondItem="0fk-PU-moH" secondAttribute="trailing" id="GS3-Ke-hJU"/>
+                        <constraint firstItem="0fk-PU-moH" firstAttribute="top" secondItem="WCI-TM-rva" secondAttribute="bottom" id="JwY-kV-Duq"/>
+                        <constraint firstAttribute="bottom" secondItem="ctl-MK-krW" secondAttribute="bottom" id="Yfe-17-KMc"/>
+                        <constraint firstItem="WCI-TM-rva" firstAttribute="top" secondItem="498-c3-tst" secondAttribute="top" id="fSj-KZ-fCU"/>
+                        <constraint firstAttribute="trailing" secondItem="ctl-MK-krW" secondAttribute="trailing" id="n0d-xI-xiv"/>
+                        <constraint firstItem="WCI-TM-rva" firstAttribute="leading" secondItem="498-c3-tst" secondAttribute="leading" id="oeZ-1f-tzt"/>
+                        <constraint firstAttribute="height" constant="60" id="sCk-sd-tNf"/>
+                        <constraint firstItem="ctl-MK-krW" firstAttribute="top" secondItem="498-c3-tst" secondAttribute="top" id="xRs-Ib-N1E"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="498-c3-tst" secondAttribute="bottom" constant="80" id="GPT-ja-GrY"/>
+                <constraint firstItem="498-c3-tst" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="HwB-Op-YCj"/>
+                <constraint firstItem="efh-c0-k5q" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ZbS-Dv-ESr"/>
+                <constraint firstItem="efh-c0-k5q" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="120" id="lr0-Ok-Ulf"/>
+            </constraints>
+            <connections>
+                <outlet property="screenShareSubTitleLabel" destination="0fk-PU-moH" id="WOU-AV-wVK"/>
+                <outlet property="screenShareTitleLabel" destination="efh-c0-k5q" id="WwZ-hU-neP"/>
+            </connections>
+            <point key="canvasLocation" x="-513" y="-613"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bottomicon_share1_press" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AskVoiceToVideoRequestViewController" customModule="HWCloudLink" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroudImageView" destination="UG5-BY-sud" id="Izl-g5-zbS"/>
+                <outlet property="contentView" destination="Gg1-Jx-mJO" id="B7O-V1-sev"/>
+                <outlet property="nameLabel" destination="KSl-j9-G05" id="qBk-dz-GPF"/>
+                <outlet property="openCameraLabel" destination="pZ8-fE-gjR" id="SGC-39-9Us"/>
+                <outlet property="statusLabel" destination="IU5-q0-v8P" id="5MK-pC-Nhe"/>
+                <outlet property="view" destination="C4s-La-MMd" id="dTA-mR-0jU"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="C4s-La-MMd">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="a" translatesAutoresizingMaskIntoConstraints="NO" id="UG5-BY-sud">
+                    <rect key="frame" x="0.0" y="80" width="414" height="298.5"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gg1-Jx-mJO">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="张三" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KSl-j9-G05">
+                    <rect key="frame" x="20" y="240" width="374" height="36"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZ8-fE-gjR">
+                    <rect key="frame" x="187.5" y="409" width="39.5" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IU5-q0-v8P">
+                    <rect key="frame" x="20" y="282" width="374" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BqI-Ks-O0r">
+                    <rect key="frame" x="0.0" y="696" width="207" height="166"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AH8-76-tCa">
+                            <rect key="frame" x="76.5" y="56" width="54" height="54"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="54" id="LMl-IW-J8G"/>
+                                <constraint firstAttribute="width" constant="54" id="hLL-Mv-FtT"/>
+                            </constraints>
+                            <state key="normal" image="hang_up_the_phone"/>
+                            <connections>
+                                <action selector="rejectButtonAction:" destination="-1" eventType="touchUpInside" id="ki1-j3-9mi"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="AH8-76-tCa" firstAttribute="centerX" secondItem="BqI-Ks-O0r" secondAttribute="centerX" id="hqw-Px-5dv"/>
+                        <constraint firstAttribute="height" constant="166" id="hz5-7G-JbS"/>
+                        <constraint firstItem="AH8-76-tCa" firstAttribute="centerY" secondItem="BqI-Ks-O0r" secondAttribute="centerY" id="snN-e0-Tsg"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WpN-sy-MOP">
+                    <rect key="frame" x="207" y="696" width="207" height="166"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tMd-d4-xWh">
+                            <rect key="frame" x="76.5" y="56" width="54" height="54"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="54" id="Mhf-lr-g6U"/>
+                                <constraint firstAttribute="width" constant="54" id="PLW-YZ-ADi"/>
+                            </constraints>
+                            <state key="normal" image="answer_the_phone"/>
+                            <connections>
+                                <action selector="sureButtonAction:" destination="-1" eventType="touchUpInside" id="nGI-cZ-2wE"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="tMd-d4-xWh" firstAttribute="centerX" secondItem="WpN-sy-MOP" secondAttribute="centerX" id="HW9-ep-Oud"/>
+                        <constraint firstItem="tMd-d4-xWh" firstAttribute="centerY" secondItem="WpN-sy-MOP" secondAttribute="centerY" id="cn2-nm-YJT"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="zBM-Kj-ex1"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="zBM-Kj-ex1" firstAttribute="trailing" secondItem="KSl-j9-G05" secondAttribute="trailing" constant="20" id="0ow-98-tJm"/>
+                <constraint firstItem="zBM-Kj-ex1" firstAttribute="trailing" secondItem="IU5-q0-v8P" secondAttribute="trailing" constant="20" id="2LL-Qb-ZIw"/>
+                <constraint firstItem="KSl-j9-G05" firstAttribute="centerX" secondItem="C4s-La-MMd" secondAttribute="centerX" id="2bL-vw-mIl"/>
+                <constraint firstItem="UG5-BY-sud" firstAttribute="top" secondItem="C4s-La-MMd" secondAttribute="top" constant="80" id="3iE-ly-zFs"/>
+                <constraint firstItem="WpN-sy-MOP" firstAttribute="height" secondItem="BqI-Ks-O0r" secondAttribute="height" id="6EP-yv-SQ0"/>
+                <constraint firstItem="BqI-Ks-O0r" firstAttribute="bottom" secondItem="zBM-Kj-ex1" secondAttribute="bottom" id="7bS-YF-yaF"/>
+                <constraint firstItem="KSl-j9-G05" firstAttribute="top" secondItem="zBM-Kj-ex1" secondAttribute="top" constant="196" id="Aoi-TW-qwO"/>
+                <constraint firstItem="UG5-BY-sud" firstAttribute="leading" secondItem="C4s-La-MMd" secondAttribute="leading" id="CbT-mb-pAz"/>
+                <constraint firstItem="Gg1-Jx-mJO" firstAttribute="trailing" secondItem="zBM-Kj-ex1" secondAttribute="trailing" id="Onp-3Q-2Iz"/>
+                <constraint firstItem="KSl-j9-G05" firstAttribute="leading" secondItem="zBM-Kj-ex1" secondAttribute="leading" constant="20" id="Vgk-TH-hXk"/>
+                <constraint firstItem="WpN-sy-MOP" firstAttribute="leading" secondItem="BqI-Ks-O0r" secondAttribute="trailing" id="WG9-5P-1hL"/>
+                <constraint firstItem="WpN-sy-MOP" firstAttribute="width" secondItem="BqI-Ks-O0r" secondAttribute="width" id="ZPc-Qj-ZLu"/>
+                <constraint firstItem="UG5-BY-sud" firstAttribute="height" secondItem="C4s-La-MMd" secondAttribute="height" multiplier="1:3" id="a8s-HT-7d6"/>
+                <constraint firstItem="pZ8-fE-gjR" firstAttribute="bottom" secondItem="UG5-BY-sud" secondAttribute="bottom" constant="50" id="cKS-dA-rB6"/>
+                <constraint firstItem="IU5-q0-v8P" firstAttribute="top" secondItem="KSl-j9-G05" secondAttribute="bottom" constant="6" id="igv-MJ-kQc"/>
+                <constraint firstAttribute="trailing" secondItem="UG5-BY-sud" secondAttribute="trailing" id="jsU-pb-H40"/>
+                <constraint firstItem="pZ8-fE-gjR" firstAttribute="centerX" secondItem="C4s-La-MMd" secondAttribute="centerX" id="m8p-Nv-eb3"/>
+                <constraint firstItem="BqI-Ks-O0r" firstAttribute="leading" secondItem="zBM-Kj-ex1" secondAttribute="leading" id="mU6-Ba-Hlu"/>
+                <constraint firstItem="zBM-Kj-ex1" firstAttribute="trailing" secondItem="WpN-sy-MOP" secondAttribute="trailing" id="oXM-mV-rUh"/>
+                <constraint firstItem="IU5-q0-v8P" firstAttribute="leading" secondItem="zBM-Kj-ex1" secondAttribute="leading" constant="20" id="p12-fU-kla"/>
+                <constraint firstItem="WpN-sy-MOP" firstAttribute="leading" secondItem="BqI-Ks-O0r" secondAttribute="trailing" id="prb-fY-Ddz"/>
+                <constraint firstItem="Gg1-Jx-mJO" firstAttribute="top" secondItem="C4s-La-MMd" secondAttribute="top" id="t1f-dL-SFQ"/>
+                <constraint firstAttribute="bottom" secondItem="Gg1-Jx-mJO" secondAttribute="bottom" id="tIh-0B-zx9"/>
+                <constraint firstItem="Gg1-Jx-mJO" firstAttribute="leading" secondItem="zBM-Kj-ex1" secondAttribute="leading" id="vuZ-ll-jeU"/>
+                <constraint firstItem="WpN-sy-MOP" firstAttribute="bottom" secondItem="zBM-Kj-ex1" secondAttribute="bottom" id="zGG-f0-ixv"/>
+            </constraints>
+            <point key="canvasLocation" x="317" y="767"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="a" width="40" height="40"/>
+        <image name="answer_the_phone" width="81" height="81"/>
+        <image name="hang_up_the_phone" width="81" height="81"/>
+    </resources>
+</document>

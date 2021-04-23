@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="lvi-rH-HjQ" userLabel="Join UserSVC Table View Cell" customClass="JoinUserSVCTableViewCell" customModule="HWCloudLink" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lvi-rH-HjQ" id="bx7-Lg-lUq">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JCK-wi-GDD">
+                        <rect key="frame" x="16" y="16" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="HtI-oM-OIt"/>
+                            <constraint firstAttribute="width" constant="40" id="qmN-wJ-t1b"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUS-QN-W9k">
+                        <rect key="frame" x="69" y="13.5" width="246" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="QtM-pW-Rvd"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4X0-7s-rLw">
+                        <rect key="frame" x="69" y="38" width="35.5" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="F6l-5h-CDJ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5Q-LK-UZM">
+                        <rect key="frame" x="373" y="23.5" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="UgC-qX-iBk"/>
+                            <constraint firstAttribute="width" constant="25" id="p9N-Pa-OyJ"/>
+                        </constraints>
+                        <state key="normal" image="meeting_user_join_voice"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="do7-qz-0zQ">
+                        <rect key="frame" x="318" y="23.5" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="aeI-et-omO"/>
+                            <constraint firstAttribute="width" constant="25" id="h3c-bH-3AJ"/>
+                        </constraints>
+                        <state key="normal" image="session_join_handup"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="do7-qz-0zQ" firstAttribute="leading" secondItem="kUS-QN-W9k" secondAttribute="trailing" constant="3" id="1aL-na-s8F"/>
+                    <constraint firstItem="JCK-wi-GDD" firstAttribute="leading" secondItem="bx7-Lg-lUq" secondAttribute="leading" constant="16" id="6qm-ru-Nna"/>
+                    <constraint firstItem="x5Q-LK-UZM" firstAttribute="leading" secondItem="do7-qz-0zQ" secondAttribute="trailing" constant="30" id="Gmz-DG-sKV"/>
+                    <constraint firstItem="kUS-QN-W9k" firstAttribute="leading" secondItem="JCK-wi-GDD" secondAttribute="trailing" constant="13" id="Jfw-4s-CI7"/>
+                    <constraint firstAttribute="trailing" secondItem="x5Q-LK-UZM" secondAttribute="trailing" constant="16" id="Lea-Nf-LUY"/>
+                    <constraint firstItem="kUS-QN-W9k" firstAttribute="centerY" secondItem="bx7-Lg-lUq" secondAttribute="centerY" constant="-12" id="gCM-j5-xU9"/>
+                    <constraint firstItem="x5Q-LK-UZM" firstAttribute="centerY" secondItem="bx7-Lg-lUq" secondAttribute="centerY" id="hB5-gg-Bgd"/>
+                    <constraint firstItem="do7-qz-0zQ" firstAttribute="centerY" secondItem="bx7-Lg-lUq" secondAttribute="centerY" id="mMl-We-OKE"/>
+                    <constraint firstItem="4X0-7s-rLw" firstAttribute="leading" secondItem="JCK-wi-GDD" secondAttribute="trailing" constant="13" id="vIu-fp-fPQ"/>
+                    <constraint firstItem="JCK-wi-GDD" firstAttribute="centerY" secondItem="bx7-Lg-lUq" secondAttribute="centerY" id="vdC-2j-Lux"/>
+                    <constraint firstAttribute="bottom" secondItem="4X0-7s-rLw" secondAttribute="bottom" constant="13" id="ynp-In-x5z"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="ouA-Zm-olk"/>
+            <connections>
+                <outlet property="showHandUpBtn" destination="do7-qz-0zQ" id="peh-0O-4YG"/>
+                <outlet property="showImageView" destination="JCK-wi-GDD" id="fbB-LD-zYe"/>
+                <outlet property="showSubTitleLabel" destination="4X0-7s-rLw" id="zrk-3q-smU"/>
+                <outlet property="showTitleLabel" destination="kUS-QN-W9k" id="170-HW-FoK"/>
+                <outlet property="showTitleRightConstraint" destination="1aL-na-s8F" id="Xz8-pq-8CK"/>
+                <outlet property="showTitleVCenterConstraint" destination="gCM-j5-xU9" id="FiO-ZV-Dst"/>
+                <outlet property="showVoiceBtn" destination="x5Q-LK-UZM" id="jAP-pi-vN0"/>
+            </connections>
+            <point key="canvasLocation" x="140.57971014492756" y="150"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="meeting_user_join_voice" width="25" height="25"/>
+        <image name="session_join_handup" width="24" height="24"/>
+    </resources>
+</document>

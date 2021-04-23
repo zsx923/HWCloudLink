@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="TableMoreTextCell" customModule="HWCloudLink" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ktu-z2-9nq">
+                        <rect key="frame" x="16" y="12" width="282" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="FW1-oF-snf"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" name="table_cell_title2"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33R-IQ-60m" customClass="ActionUILabel" customModule="HWCloudLink" customModuleProvider="target">
+                        <rect key="frame" x="16" y="36" width="282" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="hTD-iz-doS"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" name="table_cell_title"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAq-0Q-gLV">
+                        <rect key="frame" x="308" y="16" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="1mi-kZ-K5s"/>
+                            <constraint firstAttribute="width" constant="40" id="lSf-vA-t7Y"/>
+                        </constraints>
+                        <state key="normal" image="call_image"/>
+                    </button>
+                    <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4l-ti-npf">
+                        <rect key="frame" x="358" y="16" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="26n-Id-KG8"/>
+                            <constraint firstAttribute="height" constant="40" id="R3Q-yq-jlB"/>
+                        </constraints>
+                        <state key="normal" image="meeting_user_join_video"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="FAq-0Q-gLV" firstAttribute="centerY" secondItem="d4l-ti-npf" secondAttribute="centerY" id="7D2-OI-22M"/>
+                    <constraint firstItem="33R-IQ-60m" firstAttribute="trailing" secondItem="Ktu-z2-9nq" secondAttribute="trailing" id="9Mu-5c-63X"/>
+                    <constraint firstItem="33R-IQ-60m" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="9ZD-pC-sUk"/>
+                    <constraint firstItem="d4l-ti-npf" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Emg-dy-VtD"/>
+                    <constraint firstItem="Ktu-z2-9nq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="JcT-Md-d0t"/>
+                    <constraint firstAttribute="trailing" secondItem="d4l-ti-npf" secondAttribute="trailing" constant="16" id="LRg-gi-dja"/>
+                    <constraint firstItem="Ktu-z2-9nq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="WAZ-3S-Vgi"/>
+                    <constraint firstAttribute="bottom" secondItem="33R-IQ-60m" secondAttribute="bottom" constant="15" id="ZuE-CF-svv"/>
+                    <constraint firstItem="FAq-0Q-gLV" firstAttribute="leading" secondItem="Ktu-z2-9nq" secondAttribute="trailing" constant="10" id="ePN-fO-UsT"/>
+                    <constraint firstItem="d4l-ti-npf" firstAttribute="leading" secondItem="FAq-0Q-gLV" secondAttribute="trailing" constant="10" id="kfS-P7-4PM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" name="table_cell_bg"/>
+            <connections>
+                <outlet property="callBtn" destination="FAq-0Q-gLV" id="C0G-bV-Zcg"/>
+                <outlet property="showSubTitleLabel" destination="Ktu-z2-9nq" id="JWC-Xb-Lft"/>
+                <outlet property="showTitleLabel" destination="33R-IQ-60m" id="zt2-vS-XPC"/>
+                <outlet property="videoBtn" destination="d4l-ti-npf" id="3B4-3V-cFH"/>
+            </connections>
+            <point key="canvasLocation" x="-430" y="-11"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="call_image" width="24" height="24"/>
+        <image name="meeting_user_join_video" width="24" height="24"/>
+        <namedColor name="table_cell_bg">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="table_cell_title">
+            <color red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="table_cell_title2">
+            <color red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,6 @@
+framework module Pods_HWCloudLink {
+  umbrella header "Pods-HWCloudLink-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionImageTopTextCell" customModule="HWCloudLink" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="70" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="70" height="100"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nOY-fg-Bja">
+                        <rect key="frame" x="15" y="18" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="VbV-rC-8IB"/>
+                            <constraint firstAttribute="height" constant="40" id="W2f-j8-yVA"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8N-JW-15f">
+                        <rect key="frame" x="0.0" y="66" width="70" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="fYm-iO-eS8"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBo-Vt-jbt">
+                        <rect key="frame" x="42" y="15" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="16" id="ZRB-bT-onO"/>
+                            <constraint firstAttribute="height" constant="16" id="Zoq-SV-pvc"/>
+                        </constraints>
+                        <state key="normal" image="invite_contact_delete"/>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="C8N-JW-15f" secondAttribute="trailing" id="6TG-DD-CRn"/>
+                <constraint firstItem="nOY-fg-Bja" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="C18-Ul-HHe"/>
+                <constraint firstItem="nOY-fg-Bja" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="18" id="MX1-3N-iLf"/>
+                <constraint firstItem="bBo-Vt-jbt" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" constant="15" id="Pqs-EK-9By"/>
+                <constraint firstItem="C8N-JW-15f" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="XXZ-PT-ziH"/>
+                <constraint firstItem="C8N-JW-15f" firstAttribute="top" secondItem="nOY-fg-Bja" secondAttribute="bottom" constant="8" id="Z5T-n6-bLS"/>
+                <constraint firstItem="bBo-Vt-jbt" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="zf0-oe-CLJ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="deleteBtn" destination="bBo-Vt-jbt" id="PZq-S4-tg3"/>
+                <outlet property="showImageView" destination="nOY-fg-Bja" id="4uD-4A-2aN"/>
+                <outlet property="showTitleLabel" destination="C8N-JW-15f" id="mQm-Je-OsF"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="97.767857142857139"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="invite_contact_delete" width="16" height="16"/>
+    </resources>
+</document>

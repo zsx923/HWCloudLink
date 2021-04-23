@@ -1,0 +1,48 @@
+PODS:
+  - Aspects (1.4.1)
+  - CocoaLumberjack/Core (3.7.0)
+  - CocoaLumberjack/Swift (3.7.0):
+    - CocoaLumberjack/Core
+  - Masonry (1.1.0)
+  - MJRefresh (3.5.0)
+  - SDWebImage (5.10.2):
+    - SDWebImage/Core (= 5.10.2)
+  - SDWebImage/Core (5.10.2)
+  - SSZipArchive (2.2.3)
+  - SwiftTheme (0.5.5)
+  - WechatOpenSDK (1.8.7.1)
+
+DEPENDENCIES:
+  - Aspects
+  - CocoaLumberjack/Swift
+  - Masonry
+  - MJRefresh
+  - SDWebImage
+  - SSZipArchive
+  - SwiftTheme
+  - WechatOpenSDK
+
+SPEC REPOS:
+  trunk:
+    - Aspects
+    - CocoaLumberjack
+    - Masonry
+    - MJRefresh
+    - SDWebImage
+    - SSZipArchive
+    - SwiftTheme
+    - WechatOpenSDK
+
+SPEC CHECKSUMS:
+  Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
+  CocoaLumberjack: e8955b9d337ac307103b0a34fd141c32f27e53c5
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
+  SDWebImage: b969dcfc02c40a5da71eac0b03b8f1a0c794a86f
+  SSZipArchive: 62d4947b08730e4cda640473b0066d209ff033c9
+  SwiftTheme: 585ead917c78ea3fc508437b0a141d29c034bdb0
+  WechatOpenSDK: 6a4d1436c15b3b5fe2a0bd383f3046010186da44
+
+PODFILE CHECKSUM: 24abc840f20656701b9eff8d2344db631fc49988
+
+COCOAPODS: 1.9.3

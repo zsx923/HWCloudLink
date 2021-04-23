@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PrivateExplainViewController" customModule="HWCloudLink" customModuleProvider="target">
+            <connections>
+                <outlet property="agreeAndContinueBtn" destination="vvQ-ke-XQg" id="PWO-He-hSz"/>
+                <outlet property="agreeButtonBottomConstraint" destination="AeZ-xK-cf6" id="ev8-hs-56f"/>
+                <outlet property="showTextView" destination="BhJ-D3-6Rj" id="abE-xf-2cy"/>
+                <outlet property="textViewConstraintTop" destination="dUS-ly-vXB" id="4h6-fi-jYj"/>
+                <outlet property="view" destination="HDU-MF-ECv" id="Be7-2G-jHw"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="HDU-MF-ECv">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BhJ-D3-6Rj">
+                    <rect key="frame" x="16" y="1" width="382" height="827"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvQ-ke-XQg">
+                    <rect key="frame" x="16" y="836" width="382" height="44"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="jCj-Mq-DR7"/>
+                    </constraints>
+                    <state key="normal" title="同意并继续">
+                        <color key="titleColor" red="0.92549019610000005" green="0.95686274510000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="agreeAndContinueBtnClick:" destination="-1" eventType="touchUpInside" id="Ob4-sK-Bdn"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="6hk-39-YBp"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="vvQ-ke-XQg" secondAttribute="bottom" constant="16" id="AeZ-xK-cf6"/>
+                <constraint firstItem="BhJ-D3-6Rj" firstAttribute="leading" secondItem="6hk-39-YBp" secondAttribute="leading" constant="16" id="MVJ-j7-dPK"/>
+                <constraint firstItem="6hk-39-YBp" firstAttribute="trailing" secondItem="BhJ-D3-6Rj" secondAttribute="trailing" constant="16" id="Mh2-DK-Noz"/>
+                <constraint firstItem="vvQ-ke-XQg" firstAttribute="leading" secondItem="6hk-39-YBp" secondAttribute="leading" constant="16" id="QEZ-Gt-mKm"/>
+                <constraint firstItem="6hk-39-YBp" firstAttribute="trailing" secondItem="vvQ-ke-XQg" secondAttribute="trailing" constant="16" id="a6v-MR-R2j"/>
+                <constraint firstItem="BhJ-D3-6Rj" firstAttribute="top" secondItem="HDU-MF-ECv" secondAttribute="top" constant="1" id="dUS-ly-vXB"/>
+                <constraint firstItem="vvQ-ke-XQg" firstAttribute="top" secondItem="BhJ-D3-6Rj" secondAttribute="bottom" constant="8" id="gqu-Wc-4sA"/>
+            </constraints>
+            <point key="canvasLocation" x="113" y="-16"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
