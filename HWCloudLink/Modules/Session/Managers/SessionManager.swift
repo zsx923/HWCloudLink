@@ -102,10 +102,7 @@ class SessionManager: NSObject, PopTitleNormalViewDelegate {
     
     // 跳转会议界面
     func jumpConfMeetVC(sessionType: SessionType, meetInfo: ConfBaseInfo, animated: Bool) {
-                
-        let sessionType = meetInfo.isSvcConf ? SessionType.svcMeeting : SessionType.avcMeeting
-        
-        
+
         DispatchQueue.main.async {
             CLLog("进入会议页面 1 - \(self.isCurrentMeeting ? "true" : "false")")
             if self.isCurrentMeeting {

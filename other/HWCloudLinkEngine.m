@@ -80,9 +80,12 @@ static HWCloudLinkEngine *instance = nil;
 {
     SessionManager.shared.isMeetingVMR = NO;
     SessionManager.shared.isJoinImmediately = YES;
+    SessionManager.shared.isSelfPlayCurrentMeeting = YES;
+    
     SessionManager.shared.isCameraOpen = cameraEnable;
     SessionManager.shared.isMicrophoneOpen = microEnable;
-    SessionManager.shared.isSelfPlayCurrentMeeting = YES;
+    [[NSUserDefaults standardUserDefaults] setBool:microEnable forKey:GlobalDefines.shared.CurrentUserCameraStatus];
+    [[NSUserDefaults standardUserDefaults] setBool:cameraEnable forKey:GlobalDefines.shared.CurrentUserCameraStatus];
     
     NSMutableArray *attendeeArray = [NSMutableArray new];
     LdapContactInfo *contact = [ManagerService callService].ldapContactInfo;
@@ -122,9 +125,25 @@ static HWCloudLinkEngine *instance = nil;
 #pragma clang diagnostic pop
 
 
-- (void)pushLocalNotif
+- (void)startlocalTimeout
 {
+    [instance endlocalTimeout];
+    [instance performSelector:@selector(didTimeout) withObject:nil afterDelay:25.0];
+    [TranslateBridge CLLogWithMessage:@"startAbnormalTimer"];
+}
 
+- (void)endlocalTimeout
+{
+    [TranslateBridge CLLogWithMessage:@"stopAbnormalTimer"];
+    [NSObject cancelPreviousPerformRequestsWithTarget:instance selector:@selector(didTimeout) object:nil];
+}
+
+- (void)didTimeout
+{
+    [TranslateBridge CLLogWithMessage:@"加入会议25s超时"];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [MBProgressHUD hideHUD];
+    });
 }
 
 @end

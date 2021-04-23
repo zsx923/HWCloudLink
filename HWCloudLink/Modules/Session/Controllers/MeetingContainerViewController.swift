@@ -8,6 +8,7 @@
 
 import UIKit
 
+@objcMembers
 class MeetingContainerViewController: UIViewController {
 
     // 接收方信息

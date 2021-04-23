@@ -9,30 +9,37 @@
 #import "HWCloudLinkEngine+CallService.h"
 #import "MBProgressHUD+New.h"
 #import "HWCloudLink-Swift.h"
-//#import "Defines.h"
 
 @implementation HWCloudLinkEngine (CallService)
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+
 - (void)callServiceNotification
 {
+    // 系统下发来电事件
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(callComingNotification:) name:CALL_S_COMING_CALL_NOTIFY object:nil];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sdkComingCallNotification:) name:CALL_S_COMING_CALL_NOTIFY object:nil];
+    // 建立通话连接请求结果回调
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(callingConnectedNotification:) name:CONF_S_CALL_EVT_CONF_CONNECTED object:nil];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(callingChannelConnectedNotification:) name:CONF_S_CALL_EVT_CONF_CONNECTED object:nil];
+    // 呼叫结束
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(callingEndedNotification:) name:CALL_S_CALL_EVT_CALL_ENDED object:nil];
+
+    // 销毁会议页面控制器
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(callingDestoryedNotification:) name:CALL_S_CALL_EVT_CALL_DESTROY object:nil];
 }
 
-- (void)sdkComingCallNotification:(NSNotification *)notification
+- (void)callComingNotification:(NSNotification *)notification
 {
     CallInfo *callInfo = notification.object;
-//    GlobalDefines.shared.CLLog("calling number: \(NSString.encryptNumber(with: callInfo.telNumTel) ?? "")");
+    [TranslateBridge CLLogWithMessage:@"calling number: \(NSString.encryptNumber(with: callInfo.telNumTel) ?? "")"];
     [LocalNotification pushLocalNotify];
-    
     ManagerService.callService.currentCallInfo = callInfo;
-    [ManagerService.callService switchCameraOpen:NO callId:callInfo.stateInfo.callId];
-    [ManagerService.callService muteMic:NO callId:callInfo.stateInfo.callId];
-
-    if (SessionManager.shared.isCurrentMeeting) {
-//        GlobalDefines.CLLog("\(NSString.encryptNumber(with: callInfo.stateInfo.callName) ?? "") call coming...")
+    
+    if (SessionManager.shared.isCurrentMeeting)
+    {
+        [TranslateBridge CLLogWithMessage:@"\(NSString.encryptNumber(with: callInfo.stateInfo.callName) ?? "") call coming..."];
         return;
     }
     
@@ -44,8 +51,8 @@
     
     NSString *accessNumber = ManagerService.confService.currentConfBaseInfo.accessNumber ?: @"";
     NSString *telNumTel = ManagerService.callService.currentCallInfo.telNumTel ?: @"";
-//    CLLog("发会 accessNumber = \(NSString.encryptNumber(with: accessNumber) ?? "")")
-//    CLLog("来电 telNumTel = \(NSString.encryptNumber(with: telNumTel) ?? "")")
+    [TranslateBridge CLLogWithMessage:@"发会 accessNumber = \(NSString.encryptNumber(with: accessNumber) ?? "")"];
+    [TranslateBridge CLLogWithMessage:@"来电 telNumTel = \(NSString.encryptNumber(with: telNumTel) ?? "")"];
     
     if (SessionManager.shared.isJoinImmediately && [accessNumber isEqualToString:telNumTel])
     {
@@ -63,20 +70,19 @@
     }
 }
 
-- (void)callingChannelConnectedNotification:(NSNotification *)notification
+- (void)callingConnectedNotification:(NSNotification *)notification
 {
-//    CLLog("##1.通话已建立通知")
+    [TranslateBridge CLLogWithMessage:@"##1.通话已建立通知"];
     NSDictionary *userInfo = notification.userInfo;
     CallInfo *callInfo = userInfo[TSDK_CALL_INFO_KEY];
     if (!callInfo || ![callInfo isKindOfClass:[CallInfo class]])
     {
-//        CLLog("notificationCallConnected 加入会议失败")
+        [TranslateBridge CLLogWithMessage:@"notificationCallConnected 加入会议失败"];
         [MBProgressHUD showBottom:@"加入会议失败" icon:nil view:nil];
         return;;
     }
-    
-//    CLLog("notificationCallConnected 加入会议成功")
-//    CLLog("会议类型：callType:\(callInfo.stateInfo.callType) 【0:audio,1:video】")
+    [TranslateBridge CLLogWithMessage:@"notificationCallConnected 加入会议成功"];
+    [TranslateBridge CLLogWithMessage:@"会议类型：callType:\(callInfo.stateInfo.callType) 【0:audio,1:video】"];
 
     ManagerService.callService.currentCallInfo = callInfo;
     
@@ -91,22 +97,82 @@
             {
                 [[NSUserDefaults standardUserDefaults] setValue:numArray.firstObject forKey:VIRTUAL_MEETING_VMR_3_ID_SAVE_KEY];
             }
-//            CLLog("smc3.0 vmr CallID:\(numArray.firstObject)")
+            [TranslateBridge CLLogWithMessage:@"smc3.0 vmr CallID:\(numArray.firstObject)"];
         }
     }
 
-    BOOL cameraEnable = [[NSUserDefaults standardUserDefaults] boolForKey:GlobalDefines.shared.CurrentUserCameraStatus];
-    [ManagerService.callService switchCameraOpen:cameraEnable callId:callInfo.stateInfo.callId];
-    SessionManager.shared.isCameraOpen = cameraEnable;
-    [ManagerService.callService muteMic:YES callId:callInfo.stateInfo.callId];
+    [ManagerService.callService switchCameraOpen:SessionManager.shared.isCameraOpen callId:callInfo.stateInfo.callId];
+    [ManagerService.callService muteMic:SessionManager.shared.isMicrophoneOpen callId:callInfo.stateInfo.callId];
     
     if (!SessionManager.shared.isCurrentMeeting)
     {
         // 非会议中启动异常入会定时器, 如果在20S内没有会控回调过来, 结束会议
-//        startAbnormalTimer()
+        if ([self respondsToSelector:@selector(startlocalTimeout)])
+        {
+            [self performSelector:@selector(startlocalTimeout)];
+        }
     }
-
 }
 
+- (void)callingEndedNotification:(NSNotification *)notification
+{
+    if ([self respondsToSelector:@selector(endlocalTimeout)])
+    {
+        [self performSelector:@selector(endlocalTimeout)];
+    }
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW + 1.0, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [MBProgressHUD hideHUD];
+     });
+
+    NSDictionary *resultInfo = notification.userInfo;
+    CallInfo *callInfo = resultInfo[TSDK_CALL_INFO_KEY];
+    if (!callInfo || ![callInfo isKindOfClass:[CallInfo class]])
+    {
+        [TranslateBridge CLLogWithMessage:@"呼叫信息不正确"];
+        return;
+    }
+    
+    if (!callInfo.isFocus)
+    {
+        if (self.isJoining && !callInfo.serverConfId)
+        {
+            [TranslateBridge CLLogWithMessage:@"当前是加入会议，需要提示"];
+            self.isJoining = NO;
+            [MBProgressHUD showBottom:@"会议未开始或不存在" icon:nil view:nil];
+        }
+        else
+        {
+            [TranslateBridge CLLogWithMessage:@"当前呼叫为点呼, 不提示"];
+            return;
+        }
+            
+    }
+    
+    if ([TranslateBridge reasonCodeIsEqualErrorTypeWithReasonCode:callInfo.stateInfo.reasonCode
+             type:TSDK_E_CALL_ERR_REASON_CODE_NOTFOUND | TSDK_E_CALL_ERR_UNKNOWN])
+    {
+        [MBProgressHUD showBottom:@"会议未开始或不存在" icon:nil view:nil];
+    }
+
+    
+    if (SessionManager.shared.meetingMainVC.isShowInWindow)
+    {
+        [TranslateBridge CLLogWithMessage:@"dismiss"];
+        [SessionManager.shared.meetingMainVC dismissViewControllerAnimated:NO completion:^{}];
+    }
+}
+
+- (void)callingDestoryedNotification:(NSNotification *)notification
+{
+    [TranslateBridge CLLogWithMessage:@"会议销毁通知"];
+//    stopAbnormalTimer()
+    [MBProgressHUD hideHUD];
+    self.isJoining = NO;
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"aux_rec"];
+    SessionManager.shared.isCurrentMeeting = NO;
+}
+
+#pragma clang diagnostic pop
 
 @end

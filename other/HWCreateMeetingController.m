@@ -335,7 +335,6 @@
     self.microBtn.selected = !self.microBtn.selected;
     self.microEnable = self.microBtn.selected;
     self.microStatusLab.text = self.microEnable ? @"已开启" : @"已关闭";
-    [[NSUserDefaults standardUserDefaults] setBool:self.microEnable forKey:GlobalDefines.shared.CurrentUserMicrophoneStatus];
 }
 
 - (void)cameraAction:(id)sender
@@ -343,7 +342,6 @@
     self.cameraBtn.selected = !self.cameraBtn.selected;
     self.cameraEnable = self.cameraBtn.selected;
     self.cameraStatusLab.text = self.cameraEnable ? @"已开启" : @"已关闭";
-    [[NSUserDefaults standardUserDefaults] setBool:self.microEnable forKey:GlobalDefines.shared.CurrentUserCameraStatus];
 }
 
 

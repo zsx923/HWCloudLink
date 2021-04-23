@@ -8,7 +8,6 @@
 
 
 import UIKit
-import CocoaLumberjack
 
 @objcMembers
 class GlobalDefines: NSObject {
@@ -55,24 +54,20 @@ class GlobalDefines: NSObject {
     let CalledSecondsChange = "CalledSecondsChange"
 
     // 临时使用
-    let userNameAccunt:String = NSObject.getUserDefaultValue(withKey: DICT_SAVE_LOGIN_userName) != nil ? NSObject.getUserDefaultValue(withKey: DICT_SAVE_LOGIN_userName) as! String : ""
+//    let userNameAccunt:String = NSObject.getUserDefaultValue(withKey: DICT_SAVE_LOGIN_userName) != nil ? NSObject.getUserDefaultValue(withKey: DICT_SAVE_LOGIN_userName) as! String : ""
+//
+//    // 本地保存摄像头状态。和用户ID关联
+//    let CurrentUserCameraStatus = "CurrentUserCameraStatus"+(((ManagerService.call()?.isSMC3 ?? false) == false) ? GlobalDefines.shared.userNameAccunt : GlobalDefines.shared.userNameAccunt)
+//
+//    // 本地保存麦克风状态。和用户ID关联
+//    let CurrentUserMicrophoneStatus = "CurrentUserMicrophoneStatus"+(((ManagerService.call()?.isSMC3 ?? false) == false) ? GlobalDefines.shared.userNameAccunt : GlobalDefines.shared.userNameAccunt)
+    
     
     // 本地保存摄像头状态。和用户ID关联
-    let CurrentUserCameraStatus = "CurrentUserCameraStatus"+(((ManagerService.call()?.isSMC3 ?? false) == false) ? GlobalDefines.shared.userNameAccunt : GlobalDefines.shared.userNameAccunt)
+    let CurrentUserCameraStatus = "CurrentUserCameraStatus"+(((ManagerService.call()?.isSMC3 ?? false) == false) ? userNameAccunt : userNameAccunt)
     
     // 本地保存麦克风状态。和用户ID关联
-    let CurrentUserMicrophoneStatus = "CurrentUserMicrophoneStatus"+(((ManagerService.call()?.isSMC3 ?? false) == false) ? GlobalDefines.shared.userNameAccunt : GlobalDefines.shared.userNameAccunt)
-    
-    func CLLog(message: String,
-                          level: DDLogLevel = DDDefaultLogLevel,
-                          context: Int = 0,
-                          file: StaticString = #file,
-                          function: StaticString = #function,
-                          line: UInt = #line,
-                          tag: Any? = nil,
-                          asynchronous async: Bool = asyncLoggingEnabled,
-                          ddlog: DDLog = .sharedInstance) {
-        
-        _DDLogMessage(("\(message)"), level: level, flag: .info, context: context, file: file, function: function, line: line, tag: tag, asynchronous: async, ddlog: ddlog)
-    }
+    let CurrentUserMicrophoneStatus = "CurrentUserMicrophoneStatus"+(((ManagerService.call()?.isSMC3 ?? false) == false) ? userNameAccunt : userNameAccunt)
+
 }
+

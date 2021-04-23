@@ -715,6 +715,7 @@
 		DD5141F726314CDF006D65AE /* ic_bianji@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD5141EB26314CDF006D65AE /* ic_bianji@3x.png */; };
 		DD5141F926316E94006D65AE /* GlobalDefines.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5141F826316E94006D65AE /* GlobalDefines.swift */; };
 		DD5141FB26318411006D65AE /* LocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5141FA26318411006D65AE /* LocalNotification.swift */; };
+		DD514203263276A1006D65AE /* TranslateBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD514202263276A1006D65AE /* TranslateBridge.swift */; };
 		DD5C09C026302F9C0065CFDE /* HWCloudLinkEngine+Conference.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5C09B326302F9C0065CFDE /* HWCloudLinkEngine+Conference.m */; };
 		DD5C09C126302F9C0065CFDE /* HWCloudLinkEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5C09B426302F9C0065CFDE /* HWCloudLinkEngine.m */; };
 		DD5C09C226302F9C0065CFDE /* HWMeetingHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5C09B626302F9C0065CFDE /* HWMeetingHandler.m */; };
@@ -1674,6 +1675,7 @@
 		DD5141EB26314CDF006D65AE /* ic_bianji@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_bianji@3x.png"; sourceTree = "<group>"; };
 		DD5141F826316E94006D65AE /* GlobalDefines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalDefines.swift; sourceTree = "<group>"; };
 		DD5141FA26318411006D65AE /* LocalNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotification.swift; sourceTree = "<group>"; };
+		DD514202263276A1006D65AE /* TranslateBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateBridge.swift; sourceTree = "<group>"; };
 		DD5C09B226302F9C0065CFDE /* HWJoinMeetingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWJoinMeetingController.h; sourceTree = "<group>"; };
 		DD5C09B326302F9C0065CFDE /* HWCloudLinkEngine+Conference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HWCloudLinkEngine+Conference.m"; sourceTree = "<group>"; };
 		DD5C09B426302F9C0065CFDE /* HWCloudLinkEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWCloudLinkEngine.m; sourceTree = "<group>"; };
@@ -3741,6 +3743,7 @@
 		DD5C09B126302F9C0065CFDE /* other */ = {
 			isa = PBXGroup;
 			children = (
+				DD514202263276A1006D65AE /* TranslateBridge.swift */,
 				DD5141F826316E94006D65AE /* GlobalDefines.swift */,
 				DD5141FA26318411006D65AE /* LocalNotification.swift */,
 				DD5141DD26312B82006D65AE /* JDMeetingBaseHandler.h */,
@@ -4429,6 +4432,7 @@
 				AE647134256D2A4C00E9E329 /* DrawBoard.swift in Sources */,
 				67FE42942418CA2D00BA008C /* MeetAdvanceSetViewController.swift in Sources */,
 				8BE0893925AC4EA200C0F59A /* SettingAdvancedViewController.swift in Sources */,
+				DD514203263276A1006D65AE /* TranslateBridge.swift in Sources */,
 				678D30032449828600562707 /* AlertTableSingalViewController.swift in Sources */,
 				046BA15524AF1251004BFE01 /* UIViewController+FF.swift in Sources */,
 				AE64EFFB25664E03002B075E /* VoiceStream.m in Sources */,

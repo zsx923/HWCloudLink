@@ -86,17 +86,22 @@ class SessionViewController: UITableViewController {
 //        NotificationCenter.default.addObserver(self, selector: #selector(notificationConfCreateSuccess), name: NSNotification.Name.init(rawValue: CALL_S_CONF_EVT_BOOK_CONF_RESULT), object: nil)
         
         //会议连接成功。。。。
-        NotificationCenter.default.addObserver(self, selector: #selector(notificationJoinConfResult), name: NSNotification.Name.init(rawValue: CALL_S_CONF_EVT_JOIN_CONF_RESULT), object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(notificationJoinConfResult), name: NSNotification.Name.init(rawValue: CALL_S_CONF_EVT_JOIN_CONF_RESULT), object: nil)
+        
         //xjc销毁通知，1，加入会议会议id不对或者其他异常出现 。。。。
-        NotificationCenter.default.addObserver(self, selector: #selector(notificationCallDestory), name: NSNotification.Name.init(rawValue: CALL_S_CALL_EVT_CALL_DESTROY), object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(notificationCallDestory), name: NSNotification.Name.init(rawValue: CALL_S_CALL_EVT_CALL_DESTROY), object: nil)
+        
        //通话建立的通知，用来获取 callinfo 信息。。。。
-        NotificationCenter.default.addObserver(self, selector: #selector(notificationCallConnected), name: NSNotification.Name.init(rawValue: CONF_S_CALL_EVT_CONF_CONNECTED), object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(notificationCallConnected), name: NSNotification.Name.init(rawValue: CONF_S_CALL_EVT_CONF_CONNECTED), object: nil)
+        
         // 会话修改完成通知
         NotificationCenter.default.addObserver(self, selector: #selector(notificationCallModify), name: NSNotification.Name(CALL_S_CALL_EVT_CALL_MODIFY), object: nil)
+        
         // 大会模式
         NotificationCenter.default.addObserver(self, selector: #selector(notficationSvcWatchPolicy(notfication:)), name: NSNotification.Name.init(CALL_S_CONF_EVT_SVC_WATCH_POLICY_IND), object: nil)
+        
         //会议结束
-        NotificationCenter.default.addObserver(self, selector: #selector(notificationEndCall), name: NSNotification.Name(CALL_S_CALL_EVT_CALL_ENDED), object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(notificationEndCall), name: NSNotification.Name(CALL_S_CALL_EVT_CALL_ENDED), object: nil)
         
         //这两个通知是在登录状态下通过链接入会的通知
         NotificationCenter.default.addObserver(self, selector: #selector(loginStatusLinkJoinMeetingSuccess(noti:)), name: NSNotification.Name(LOGIN_STATUS_LINK_JOINMEETING_SUCCESS), object: nil)
@@ -509,10 +514,6 @@ extension SessionViewController {
             return
         }
         
-//        let vc = HWCreateMeetingController.init()
-//        self.navigationController?.pushViewController(vc, animated: true)
-//        return
-        
         let dict : Dictionary<String, String>  = ["key1" : "one"]
         let array:[String] = ["1", "2"]
         HWCloudLinkEngine.sharedInstance().mainController = UIViewController.currentViewController()
@@ -542,6 +543,12 @@ extension SessionViewController {
             SessionManager.showMeetingWarning()
             return
         }
+        
+        let dict : Dictionary<String, String>  = ["key1" : "one"]
+        let array:[String] = ["1", "2"]
+        HWCloudLinkEngine.sharedInstance().mainController = UIViewController.currentViewController()
+        HWMeetingHandler.createMeeting(withUsers: array, owner: dict, title: "meeting", keywords: "", meetingType: 0)
+        return
         
         let storyboard = UIStoryboard.init(name: "JoinMeetingViewController", bundle: nil)
         let joinMeetingViewVC = storyboard.instantiateViewController(withIdentifier: "JoinMeetingView") as! JoinMeetingViewController

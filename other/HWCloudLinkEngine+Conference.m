@@ -13,20 +13,22 @@
 
 @implementation HWCloudLinkEngine (Conference)
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+
 - (void)conferenceServiceNotification
 {
     // 会议创建结果回调
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(conferenceStatusNotification:) name:CALL_S_CONF_EVT_BOOK_CONF_RESULT object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(conferenceCreateStatusNotification:) name:CALL_S_CONF_EVT_BOOK_CONF_RESULT object:nil];
     
     // 主动加入会议请求失败回调
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(activeJoinConferenceFailedNotification:) name:@"JOINCONFFAIL" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(conferenceActiveJoinFailedNotification:) name:@"JOINCONFFAIL" object:nil];
     
     // 加入会议结果状态回调
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(connectConferenceStatusNotification:) name:CALL_S_CONF_EVT_JOIN_CONF_RESULT object:nil];
- 
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(conferenceJoinedStatusNotification:) name:CALL_S_CONF_EVT_JOIN_CONF_RESULT object:nil];
 }
 
-- (void)conferenceStatusNotification:(NSNotification *)notification
+- (void)conferenceCreateStatusNotification:(NSNotification *)notification
 {
     NSString *text = (SessionManager.shared.isBespeak ? @"预约会议" : @"创建会议");
     SessionManager.shared.isSelfPlayConf = !SessionManager.shared.isSelfPlayConf;
@@ -61,13 +63,18 @@
 }
 
 
-- (void)connectConferenceStatusNotification:(NSNotification *)notification
+- (void)conferenceJoinedStatusNotification:(NSNotification *)notification
 {
-//    CLLog("##3.连接会议回调通知")
+    [TranslateBridge CLLogWithMessage:@"##3.连接会议回调通知"];
     [MBProgressHUD hideHUD];
-//    // 停止异常入会定时器
-//    stopAbnormalTimer()
-//    // 销毁定时器
+    
+    // 停止异常入会定时器
+    if ([self respondsToSelector:@selector(endLocalTimeout)])
+    {
+        [self performSelector:@selector(endLocalTimeout)];
+    }
+    
+    // 销毁定时器
     [NickJionMeetingManager.manager stopAbnormalTimer];
     
     // 判断会议信息
@@ -82,23 +89,22 @@
         return;
     }
 
-//    CLLog(" 开始加入会议")
-    
-    //如果是加入会议，此时需要把isjoining 置位false ，因为会议结束的时候也会收到会议结束的通知，
+    [TranslateBridge CLLogWithMessage:@" 开始加入会议"];
+
+    // 如果是加入会议，此时需要把isjoining 置位false ，因为会议结束的时候也会收到会议结束的通知，
     if (self.isJoining)
     {
         self.isJoining = NO;
     }
     
     // 进入会场
-    
     CallInfo *callInfo = ManagerService.callService.currentCallInfo;
     ConfBaseInfo *cloudInfo = SessionManager.shared.cloudMeetInfo;
     
     confInfo.scheduleUserName = @"";
     SessionManager.shared.currentCallId = confInfo.callId;
     confInfo.mediaType = CONF_MEDIATYPE_VIDEO;
-//    CLLog("==========会议类型mediaType:\(meetInfo.mediaType) 【0:voice，1:video】")
+    [TranslateBridge CLLogWithMessage:@"==========会议类型mediaType:\(meetInfo.mediaType) 【0:voice，1:video】"];
     
     confInfo.confSubject = SessionManager.shared.isMeetingVMR ? cloudInfo.confSubject : @"";
     confInfo.accessNumber = SessionManager.shared.isMeetingVMR ?
@@ -115,37 +121,27 @@
     
     confInfo.isConf = YES;
     confInfo.isImmediately = YES;
-//    CLLog("连接会议回调 - ECONF_E_CONNECT_KEY \(meetInfo.mediaType)")
+    [TranslateBridge CLLogWithMessage:@"连接会议回调 - ECONF_E_CONNECT_KEY \(meetInfo.mediaType)"];
     
     if (callInfo)
     {
-//        SessionType sessionType = 1;//callInfo.isSvcCall ? svcMeeting : avcMeeting;
-//        CLLog("##4.跳转页面 isSVC[\(currentCallInfo.isSvcCall)]")
-//        if meetInfo.mediaType == CONF_MEDIATYPE_VIDEO {
-//            sessionType = currentCallInfo.isSvcCall ? .svcMeeting : .avcMeeting
-//        }
-//        CLLog("========入会sessionType:\(sessionType) ===:mediaType:\(meetInfo.mediaType)")
-        
+        [TranslateBridge CLLogWithMessage:@"##4.跳转页面 isSVC[\(callInfo.isSvcCall)]"];
+        [TranslateBridge CLLogWithMessage:@"========入会sessionType:\(sessionType) ===:mediaType:\(meetInfo.mediaType)"];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW + 0.5, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//            [SessionManager.shared jump];
-//            [SessionManager.shared jumpConfMeetVC123WithSessionType:<#(ConfBaseInfo * _Nonnull)#>]
+            [TranslateBridge jumpConfMeetVCWithCallInfo:callInfo meetInfo:confInfo animated:YES];
          });
-//        DispatchQueue.main.asyncAfter(deadline: .now()+0.5) { // 延迟0.5秒跳转
-//            SessionManager.shared.jumpConfMeetVC(sessionType: sessionType, meetInfo: meetInfo, animated: true)
-//        }
     }
     else
     {
-//        CLLog("callInfo is nil")
+        [TranslateBridge CLLogWithMessage:@"callInfo is nil"];
     }
 }
 
-- (void)activeJoinConferenceFailedNotification:(NSNotification *)notification
+- (void)conferenceActiveJoinFailedNotification:(NSNotification *)notification
 {
     dispatch_async(dispatch_get_main_queue(), ^{
         [MBProgressHUD hideHUD];
         [MBProgressHUD showBottom:@"加入会议失败" icon:nil view:nil];
-        
     });
 }
 
@@ -193,5 +189,7 @@
     SessionManager.shared.isSelfPlayCurrentMeeting = NO;
     SessionManager.shared.isJoinImmediately = NO;
 }
+
+#pragma clang diagnostic pop
 
 @end
