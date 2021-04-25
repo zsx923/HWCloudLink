@@ -430,8 +430,8 @@
             filePath = "HWCloudLink/Modules/Session/Controllers/SVCMeetingViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1834"
-            endingLineNumber = "1834"
+            startingLineNumber = "1837"
+            endingLineNumber = "1837"
             landmarkName = "refreshMuteImage(isMute:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -439,24 +439,8 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "36CE66FC-DA9D-476B-A5A5-49E3BC972AB7"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HWCloudLink/Modules/Session/Controllers/SVCMeetingViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1825"
-            endingLineNumber = "1825"
-            landmarkName = "refreshVideoImage(isCameraOpen:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "B4CA26DE-450E-4024-A077-AE1978070DE1"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "other/HWCloudLinkEngine+CallService.m"
@@ -472,7 +456,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A0A3A1F6-8DDB-4CB4-9F0F-BA298A6C8868"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "other/HWCloudLinkEngine+CallService.m"
@@ -487,16 +471,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "629D5DA0-E942-46F2-87D4-01D5D7931CB4"
-            shouldBeEnabled = "Yes"
+            uuid = "1397B2D4-363A-47A7-A28B-18A15F3CA4F6"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HWCloudLink/Modules/Session/Controllers/SVCMeetingViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1911"
-            endingLineNumber = "1911"
+            startingLineNumber = "1916"
+            endingLineNumber = "1916"
             landmarkName = "setMicrophoneOpenClose()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "262720D8-2357-4066-938E-4F7D289D6193"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HWCloudLink/Modules/Session/Controllers/SVCMeetingViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1712"
+            endingLineNumber = "1712"
+            landmarkName = "notificationCallDeviceState(notfication:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

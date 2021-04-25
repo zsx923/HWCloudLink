@@ -250,7 +250,9 @@ class SVCMeetingViewController: MeetingViewController {
         bottomBtnisEnabled(isEnabled: false)
         
         // 设置底部按钮图片颜色
+        self.muteButton.isSelected = !SessionManager.shared.isMicrophoneOpen
         refreshMuteImage(isMute: true)
+        self.cammerButton.isSelected = SessionManager.shared.isCameraOpen
         refreshVideoImage(isCameraOpen: false)
         refreshShareImage()
         refreshAddUserImage()
@@ -382,7 +384,8 @@ class SVCMeetingViewController: MeetingViewController {
         if self.svcManager.mineConfInfo != nil, self.isUpdataCameraMicrophoneState == true {
             HWAuthorizationManager.shareInstanst.authorizeToMicrophone { (isAuto) in
                 if isAuto {  // 已授权麦克风
-                    self.muteButton.isSelected = self.svcManager.mineConfInfo?.is_mute ?? true
+//                    self.muteButton.isSelected = self.svcManager.mineConfInfo?.is_mute ?? !SessionManager.shared.isMicrophoneOpen
+                    self.muteButton.isSelected = !SessionManager.shared.isMicrophoneOpen
                     self.refreshMuteImage(isMute: self.muteButton.isSelected)
                     SessionManager.shared.isMicrophoneOpen = !self.muteButton.isSelected
                 }
@@ -1359,7 +1362,7 @@ extension SVCMeetingViewController {
                         SessionManager.shared.isMicrophoneOpen = !self.muteButton.isSelected
                     }else {
                         if self.isAutomaticallyChairperson { // 自动申请主持人 授权麦克风权限 更新麦克风状态
-                            self.muteButton.isSelected = false
+                            self.muteButton.isSelected = !SessionManager.shared.isMicrophoneOpen
                             self.refreshMuteImage(isMute: self.muteButton.isSelected)
                             SessionManager.shared.isMicrophoneOpen = !self.muteButton.isSelected
                             self.isAutomaticallyChairperson = false
@@ -1909,7 +1912,8 @@ extension SVCMeetingViewController {
         // 自己是主席判断,并且不是被邀入会
         if self.svcManager.mineConfInfo?.role == CONFCTRL_CONF_ROLE.CONF_ROLE_CHAIRMAN {
             CLLog("麦克风 - 自己是主席 - 打开音频")
-            self.muteButton.isSelected = false
+            
+            self.muteButton.isSelected = !SessionManager.shared.isMicrophoneOpen
             let result = self.callManager.confCtrlMuteAttendee(participantId: self.svcManager.mineConfInfo?.participant_id, isMute: self.muteButton.isSelected)
             self.refreshMuteImage(isMute: self.muteButton.isSelected)
             SessionManager.shared.isMicrophoneOpen = !self.muteButton.isSelected
@@ -1934,7 +1938,7 @@ extension SVCMeetingViewController {
             guard let self = self else { return }
             if isAuto {
                 CLLog("-已授权麦克风-")
-                self.muteButton.isSelected = false
+                self.muteButton.isSelected = !SessionManager.shared.isMicrophoneOpen
                 let result = self.callManager.confCtrlMuteAttendee(participantId: self.svcManager.mineConfInfo?.participant_id, isMute: self.muteButton.isSelected)
                 self.refreshMuteImage(isMute: self.muteButton.isSelected)
                 SessionManager.shared.isMicrophoneOpen = !self.muteButton.isSelected
