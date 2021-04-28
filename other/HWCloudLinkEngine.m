@@ -98,9 +98,43 @@ static HWCloudLinkEngine *instance = nil;
     if (pwd.length < 1) pwd = @"";
     
     [MBProgressHUD showMessage:@"创建会议中..."];
+    [instance startlocalTimeout];
     EC_CONF_MEDIATYPE type = CONF_MEDIATYPE_VIDEO;
     [[ManagerService confService] vmrBaseInfo].generalPwd = pwd;
-    [[ManagerService confService] creatCommonConferenceWithAttendee:attendeeArray mediaType:type subject:subject password:pwd];
+    BOOL result = [[ManagerService confService] creatCommonConferenceWithAttendee:attendeeArray mediaType:type subject:subject password:pwd];
+    if (result)
+    {
+        [instance endlocalTimeout];
+    }
+}
+
+- (void)joinMeetingWithConferenceId:(NSString *)confId accessNumber:(NSString *)accessNumber password:(NSString *)pwd microEnable:(BOOL)microEnable cameraEnable:(BOOL)cameraEnable
+{
+    SessionManager.shared.isCameraOpen = cameraEnable;
+    SessionManager.shared.isMicrophoneOpen = microEnable;
+    [[NSUserDefaults standardUserDefaults] setBool:microEnable forKey:GlobalDefines.shared.CurrentUserMicrophoneStatus];
+    [[NSUserDefaults standardUserDefaults] setBool:cameraEnable forKey:GlobalDefines.shared.CurrentUserCameraStatus];
+    
+    NSString *joinNumber = ManagerService.callService.terminal;
+    [TranslateBridge CLLogWithMessage:[NSString stringWithFormat:@"开始加入会议，会议id:%@, terminal:%@", [NSString encryptNumberWithString:accessNumber], joinNumber]];
+    
+    [MBProgressHUD showMessage:@"正在加入会议..."];
+    [instance startlocalTimeout];
+    BOOL result = [ManagerService.confService joinConferenceWithConfId:confId AccessNumber:accessNumber confPassWord:pwd joinNumber:joinNumber isVideoJoin:YES];
+    if (!result)
+    {
+        [MBProgressHUD hideHUD];
+        [MBProgressHUD showBottom:@"加入会议失败" icon:nil view:nil];
+    }
+    else
+    {
+        [instance endlocalTimeout];
+        UIViewController *vc = self.mainController.presentedViewController;
+        if ([vc isKindOfClass:NSClassFromString(@"HWJoinMeetingController")])
+        {
+            [vc dismissViewControllerAnimated:YES completion:^{}];
+        }
+    }
 }
 
 #pragma clang diagnostic push
@@ -140,7 +174,7 @@ static HWCloudLinkEngine *instance = nil;
 
 - (void)didTimeout
 {
-    [TranslateBridge CLLogWithMessage:@"加入会议25s超时"];
+    [TranslateBridge CLLogWithMessage:@"加入会议超时..."];
     dispatch_async(dispatch_get_main_queue(), ^{
         [MBProgressHUD hideHUD];
     });

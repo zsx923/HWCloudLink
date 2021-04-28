@@ -33,13 +33,13 @@
 - (void)callComingNotification:(NSNotification *)notification
 {
     CallInfo *callInfo = notification.object;
-    [TranslateBridge CLLogWithMessage:@"calling number: \(NSString.encryptNumber(with: callInfo.telNumTel) ?? "")"];
+    [TranslateBridge CLLogWithMessage:[NSString stringWithFormat:@"calling number: %@", [NSString encryptNumberWithString:callInfo.telNumTel]]];
     [LocalNotification pushLocalNotify];
     ManagerService.callService.currentCallInfo = callInfo;
     
     if (SessionManager.shared.isCurrentMeeting)
     {
-        [TranslateBridge CLLogWithMessage:@"\(NSString.encryptNumber(with: callInfo.stateInfo.callName) ?? "") call coming..."];
+        [TranslateBridge CLLogWithMessage:[NSString stringWithFormat:@"%@ call coming ...", [NSString encryptNumberWithString:callInfo.stateInfo.callName]]];
         return;
     }
     
@@ -51,12 +51,13 @@
     
     NSString *accessNumber = ManagerService.confService.currentConfBaseInfo.accessNumber ?: @"";
     NSString *telNumTel = ManagerService.callService.currentCallInfo.telNumTel ?: @"";
-    [TranslateBridge CLLogWithMessage:@"发会 accessNumber = \(NSString.encryptNumber(with: accessNumber) ?? "")"];
-    [TranslateBridge CLLogWithMessage:@"来电 telNumTel = \(NSString.encryptNumber(with: telNumTel) ?? "")"];
+    [TranslateBridge CLLogWithMessage:[NSString stringWithFormat:@"发会 accessNumber = %@", [NSString encryptNumberWithString:accessNumber]]];
+     [TranslateBridge CLLogWithMessage:[NSString stringWithFormat:@"发会 telNumTel = %@", [NSString encryptNumberWithString:telNumTel]]];
     
     if (SessionManager.shared.isJoinImmediately && [accessNumber isEqualToString:telNumTel])
     {
         SessionManager.shared.isJoinImmediately = NO;
+        [MBProgressHUD hideHUD];
         [MBProgressHUD showMessage:@"正在加入会议..."];
         [ManagerService.callService answerComingCallType:CALL_VIDEO callId:callInfo.stateInfo.callId];
     }
@@ -82,7 +83,7 @@
         return;;
     }
     [TranslateBridge CLLogWithMessage:@"notificationCallConnected 加入会议成功"];
-    [TranslateBridge CLLogWithMessage:@"会议类型：callType:\(callInfo.stateInfo.callType) 【0:audio,1:video】"];
+    [TranslateBridge CLLogWithMessage:@"会议类型：callType : CALL_VIDEO"];
 
     ManagerService.callService.currentCallInfo = callInfo;
     
@@ -97,7 +98,7 @@
             {
                 [[NSUserDefaults standardUserDefaults] setValue:numArray.firstObject forKey:VIRTUAL_MEETING_VMR_3_ID_SAVE_KEY];
             }
-            [TranslateBridge CLLogWithMessage:@"smc3.0 vmr CallID:\(numArray.firstObject)"];
+            [TranslateBridge CLLogWithMessage:[NSString stringWithFormat:@"smc3.0 vmr CallID: %@", numArray.firstObject]];
         }
     }
 

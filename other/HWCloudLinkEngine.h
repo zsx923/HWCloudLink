@@ -24,6 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)createMeetingWithSubject:(NSString *)subject password:(NSString *)pwd microEnable:(BOOL)microEnable cameraEnable:(BOOL)cameraEnable;
 
+- (void)joinMeetingWithConferenceId:(NSString *)confId accessNumber:(NSString *)accessNumber password:(NSString *)pwd microEnable:(BOOL)microEnable cameraEnable:(BOOL)cameraEnable;
+
 
 @end
 

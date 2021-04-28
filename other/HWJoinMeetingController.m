@@ -121,7 +121,7 @@
     startMeetingBtn.backgroundColor = [UIColor colorWithRed:48/255.0 green:111/255.0 blue:220/255.0 alpha:1.0];
     startMeetingBtn.layer.cornerRadius = 4;
     [startMeetingBtn setTitle:@"加入会议" forState:UIControlStateNormal];
-    [startMeetingBtn addTarget:self action:@selector(startMeetingAction:) forControlEvents:UIControlEventTouchUpInside];
+    [startMeetingBtn addTarget:self action:@selector(joinMeetingAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.actionView addSubview:startMeetingBtn];
     [startMeetingBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.mas_equalTo(self.actionView.mas_bottom).offset(-84);
@@ -287,8 +287,7 @@
     NSDictionary *info = [notification userInfo];
     CGFloat duration = [[info objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
     CGRect endKeyboardRect = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
-    NSLog(@"键盘rect ----> %@", NSStringFromCGRect(endKeyboardRect));
-
+    
     CGRect rect = self.actionView.frame;
     CGFloat KeyboardY = endKeyboardRect.origin.y;
     CGFloat transY = KeyboardY - CGRectGetHeight(rect);
@@ -321,19 +320,17 @@
 
 - (void)closeAction:(id)sender
 {
-    [self.navigationController popViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:^{}];
 }
 
 - (void)inputPwdAction:(id)sender
 {
-    NSLog(@"inputPwdAction ........");
     [(UIButton *)sender setHidden:YES];
     self.passwordTextField.hidden = NO;
 }
 
 - (void)microAction:(id)sender
 {
-    NSLog(@"microAction ........");
     self.microBtn.selected = !self.microBtn.selected;
     self.microEnable = self.microBtn.selected;
     self.microStatusLab.text = self.microEnable ? @"已开启" : @"已关闭";
@@ -342,7 +339,6 @@
 
 - (void)cameraAction:(id)sender
 {
-    NSLog(@"cameraAction ........");
     self.cameraBtn.selected = !self.cameraBtn.selected;
     self.cameraEnable = self.cameraBtn.selected;
     self.cameraStatusLab.text = self.cameraEnable ? @"已开启" : @"已关闭";
@@ -350,10 +346,12 @@
 }
 
 
-- (void)startMeetingAction:(id)sender
+- (void)joinMeetingAction:(id)sender
 {
-    NSLog(@"startMeetingAction ........");
     [self keyboardStatusHandle];
+    
+    HWCloudLinkEngine *engine = [HWCloudLinkEngine sharedInstance];
+    [engine joinMeetingWithConferenceId:@"" accessNumber:self.meetingIdTextField.text password:self.passwordTextField.text microEnable:self.microEnable cameraEnable:self.cameraEnable];
 }
 
 #pragma mark -

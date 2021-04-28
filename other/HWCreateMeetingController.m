@@ -287,7 +287,6 @@
     NSDictionary *info = [notification userInfo];
     CGFloat duration = [[info objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
     CGRect endKeyboardRect = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
-    NSLog(@"键盘rect ----> %@", NSStringFromCGRect(endKeyboardRect));
 
     CGRect rect = self.actionView.frame;
     CGFloat KeyboardY = endKeyboardRect.origin.y;

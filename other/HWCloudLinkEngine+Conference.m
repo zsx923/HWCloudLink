@@ -9,7 +9,6 @@
 #import "HWCloudLinkEngine+Conference.h"
 #import "MBProgressHUD+New.h"
 #import "HWCloudLink-Swift.h"
-#import "Defines.h"
 
 @implementation HWCloudLinkEngine (Conference)
 
@@ -40,10 +39,16 @@
             NSString *result = notification.userInfo[ECCONF_RESULT_KEY];
             if ([result isEqualToString:@"1"])
             {
-                [MBProgressHUD showBottom:[NSString stringWithFormat:@"%@成功", text] icon:nil view:nil];
+//                [MBProgressHUD showBottom:[NSString stringWithFormat:@"%@成功", text] icon:nil view:nil];
                 if (ManagerService.callService.isSMC3 && SessionManager.shared.isBespeak)
                 {
                     [[NSUserDefaults standardUserDefaults] setValue:result forKey:@"YUYUELEHUIYI"];
+                }
+                
+                UIViewController *vc = self.mainController.presentedViewController;
+                if ([vc isKindOfClass:NSClassFromString(@"HWCreateMeetingController")])
+                {
+                    [vc dismissViewControllerAnimated:YES completion:^{}];
                 }
             }
             else
@@ -53,12 +58,7 @@
         }
         
         SessionManager.shared.isBespeak = NO;
-        UIViewController *vc = self.mainController.presentedViewController;
-        if ([vc isKindOfClass:NSClassFromString(@"HWCreateMeetingController")] ||
-            [vc isKindOfClass:NSClassFromString(@"HWJoinMeetingController")])
-        {
-            [vc dismissViewControllerAnimated:YES completion:^{}];
-        }
+        
     });
 }
 
@@ -104,7 +104,7 @@
     confInfo.scheduleUserName = @"";
     SessionManager.shared.currentCallId = confInfo.callId;
     confInfo.mediaType = CONF_MEDIATYPE_VIDEO;
-    [TranslateBridge CLLogWithMessage:@"==========会议类型mediaType:\(meetInfo.mediaType) 【0:voice，1:video】"];
+    [TranslateBridge CLLogWithMessage:@"==========会议类型mediaType:CONF_MEDIATYPE_VIDEO"];
     
     confInfo.confSubject = SessionManager.shared.isMeetingVMR ? cloudInfo.confSubject : @"";
     confInfo.accessNumber = SessionManager.shared.isMeetingVMR ?
@@ -121,12 +121,12 @@
     
     confInfo.isConf = YES;
     confInfo.isImmediately = YES;
-    [TranslateBridge CLLogWithMessage:@"连接会议回调 - ECONF_E_CONNECT_KEY \(meetInfo.mediaType)"];
+    [TranslateBridge CLLogWithMessage:@"连接会议回调 - ECONF_E_CONNECT_KEY : CONF_MEDIATYPE_VIDEO"];
     
     if (callInfo)
     {
-        [TranslateBridge CLLogWithMessage:@"##4.跳转页面 isSVC[\(callInfo.isSvcCall)]"];
-        [TranslateBridge CLLogWithMessage:@"========入会sessionType:\(sessionType) ===:mediaType:\(meetInfo.mediaType)"];
+        [TranslateBridge CLLogWithMessage:[NSString stringWithFormat:@"##4.跳转页面 isSVC %d", callInfo.isSvcCall]];
+        [TranslateBridge CLLogWithMessage:@"========入会sessionType : CONF_MEDIATYPE_VIDEO"];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW + 0.5, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [TranslateBridge jumpConfMeetVCWithCallInfo:callInfo meetInfo:confInfo animated:YES];
          });

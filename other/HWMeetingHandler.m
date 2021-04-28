@@ -9,7 +9,7 @@
 #import "HWMeetingHandler.h"
 #import "HWCloudLinkEngine.h"
 #import "HWCreateMeetingController.h"
-
+#import "HWJoinMeetingController.h"
 #import "ServiceManager.h"
 
 @implementation HWMeetingHandler
@@ -47,8 +47,10 @@ keywords:(NSString *)keywords meetingType:(NSInteger)meetingType
 // 加入会议
 + (void)joinMeetingWithMessageInfo:(NSDictionary *)messageInfo
 {
-    
-
+    HWCloudLinkEngine *engine = [HWCloudLinkEngine sharedInstance];
+    HWJoinMeetingController *vc = [HWJoinMeetingController new];
+    vc.modalPresentationStyle = UIModalPresentationFullScreen;
+    [engine.mainController presentViewController:vc animated:YES completion:^{}];
 }
 
 + (void)joinAppointMeeting:(NSString *_Nonnull)meetingId password:(NSString *_Nullable)pwd meetingType:(NSInteger)meetingType

@@ -19,7 +19,6 @@ class TranslateBridge: NSObject {
         
         let sessionType = callInfo.isSvcCall ? SessionType.svcMeeting : SessionType.avcMeeting
         SessionManager.shared.jumpConfMeetVC(sessionType: sessionType, meetInfo: meetInfo, animated: animated)
-        
     }
     
     static func CLLog(message: String) {
