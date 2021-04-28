@@ -296,7 +296,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "BF5422AD-D096-4476-BEAF-D5F94547E4BF"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "other/HWCloudLinkEngine+CallService.m"
@@ -312,7 +312,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "592D855C-48E7-4030-AF93-D93421FEE83B"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "other/HWCloudLinkEngine+CallService.m"
@@ -328,7 +328,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "74949F78-C488-4356-84D5-4AE6DDBA2A89"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "other/HWCloudLinkEngine+Conference.m"
@@ -344,7 +344,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "BFFED373-AA3A-49E7-B975-44091862CB5E"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "other/HWCloudLinkEngine+Conference.m"
@@ -423,24 +423,8 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "23903F4F-B54A-4E07-8D91-347320601DAF"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HWCloudLink/Modules/Session/Controllers/SVCMeetingViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1837"
-            endingLineNumber = "1837"
-            landmarkName = "refreshMuteImage(isMute:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "B4CA26DE-450E-4024-A077-AE1978070DE1"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "other/HWCloudLinkEngine+CallService.m"
@@ -456,7 +440,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A0A3A1F6-8DDB-4CB4-9F0F-BA298A6C8868"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "other/HWCloudLinkEngine+CallService.m"
@@ -497,6 +481,70 @@
             startingLineNumber = "1712"
             endingLineNumber = "1712"
             landmarkName = "notificationCallDeviceState(notfication:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4C7961F6-109C-40E8-A9F9-D73A02E64DA5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "other/HWCloudLinkEngine+Conference.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
+            landmarkName = "-conferenceActiveJoinFailedNotification:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4C7961F6-109C-40E8-A9F9-D73A02E64DA5 - 4006b0e79404fb7f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[HWCloudLinkEngine(Conference) conferenceActiveJoinFailedNotification:]"
+                  moduleName = "HWCloudLink"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/huangyingjie9/projects/HWCloudLink/other/HWCloudLinkEngine+Conference.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "142"
+                  endingLineNumber = "142"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "4C7961F6-109C-40E8-A9F9-D73A02E64DA5 - d7cb3971481f3063"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__72-[HWCloudLinkEngine(Conference) conferenceActiveJoinFailedNotification:]_block_invoke"
+                  moduleName = "HWCloudLink"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/huangyingjie9/projects/HWCloudLink/other/HWCloudLinkEngine+Conference.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "143"
+                  endingLineNumber = "143"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3A9210DB-BFEC-4EC3-B8A0-91CAF0EF41AF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HWCloudLink/libs/Depand_Extension/Service/Conference Plugin/ConferenceService.mm"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2034"
+            endingLineNumber = "2034"
+            landmarkName = "-joinConferenceWithConfId:AccessNumber:confPassWord:joinNumber:isVideoJoin:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

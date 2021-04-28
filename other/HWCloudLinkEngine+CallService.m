@@ -20,10 +20,10 @@
     // 系统下发来电事件
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(callComingNotification:) name:CALL_S_COMING_CALL_NOTIFY object:nil];
     
-    // 建立通话连接请求结果回调
+    // 建立通话连接请求成功回调
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(callingConnectedNotification:) name:CONF_S_CALL_EVT_CONF_CONNECTED object:nil];
     
-    // 呼叫结束
+    // 通话连接结束
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(callingEndedNotification:) name:CALL_S_CALL_EVT_CALL_ENDED object:nil];
 
     // 销毁会议页面控制器
