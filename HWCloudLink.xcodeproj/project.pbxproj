@@ -700,7 +700,17 @@
 		DA6A6E3425E4FE6600F80A27 /* JailBrokenHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6A6E3325E4FE6600F80A27 /* JailBrokenHelper.swift */; };
 		DA7123B225CD1EE600DB5825 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7123B125CD1EE600DB5825 /* UIColor+Extension.m */; };
 		DAA9731125D1643200A9E5E7 /* JoinMeetingHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA9731025D1643200A9E5E7 /* JoinMeetingHistoryViewController.swift */; };
-		DD5141DF26312B82006D65AE /* JDMeetingBaseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5141DE26312B82006D65AE /* JDMeetingBaseHandler.m */; };
+		DD509C40263966400023E162 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = DD509C3E263966400023E162 /* UINavigationController+FDFullscreenPopGesture.m */; };
+		DD509C41263966400023E162 /* JDMeetingBaseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = DD509C3F263966400023E162 /* JDMeetingBaseHandler.m */; };
+		DD509C54263967080023E162 /* HWJoinMeetingController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD509C45263967070023E162 /* HWJoinMeetingController.m */; };
+		DD509C55263967080023E162 /* HWCreateMeetingController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD509C46263967070023E162 /* HWCreateMeetingController.m */; };
+		DD509C56263967080023E162 /* HWCloudLinkEngine+Conference.m in Sources */ = {isa = PBXBuildFile; fileRef = DD509C48263967080023E162 /* HWCloudLinkEngine+Conference.m */; };
+		DD509C57263967080023E162 /* HWCloudLinkEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = DD509C49263967080023E162 /* HWCloudLinkEngine.m */; };
+		DD509C58263967080023E162 /* HWCloudLinkEngine+Login.m in Sources */ = {isa = PBXBuildFile; fileRef = DD509C4E263967080023E162 /* HWCloudLinkEngine+Login.m */; };
+		DD509C59263967080023E162 /* HWCloudLinkEngine+CallService.m in Sources */ = {isa = PBXBuildFile; fileRef = DD509C4F263967080023E162 /* HWCloudLinkEngine+CallService.m */; };
+		DD509C5A263967080023E162 /* TranslateBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD509C51263967080023E162 /* TranslateBridge.swift */; };
+		DD509C5B263967080023E162 /* LocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD509C52263967080023E162 /* LocalNotification.swift */; };
+		DD509C5C263967080023E162 /* GlobalDefines.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD509C53263967080023E162 /* GlobalDefines.swift */; };
 		DD5141EC26314CDF006D65AE /* Icon_Nb.png in Resources */ = {isa = PBXBuildFile; fileRef = DD5141E026314CDE006D65AE /* Icon_Nb.png */; };
 		DD5141ED26314CDF006D65AE /* Icon_Nb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD5141E126314CDE006D65AE /* Icon_Nb@2x.png */; };
 		DD5141EE26314CDF006D65AE /* Icon_Nb@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD5141E226314CDE006D65AE /* Icon_Nb@3x.png */; };
@@ -713,18 +723,8 @@
 		DD5141F526314CDF006D65AE /* btn_meeting_click_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD5141E926314CDF006D65AE /* btn_meeting_click_off@2x.png */; };
 		DD5141F626314CDF006D65AE /* btn_meeting_click_off.png in Resources */ = {isa = PBXBuildFile; fileRef = DD5141EA26314CDF006D65AE /* btn_meeting_click_off.png */; };
 		DD5141F726314CDF006D65AE /* ic_bianji@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD5141EB26314CDF006D65AE /* ic_bianji@3x.png */; };
-		DD5141F926316E94006D65AE /* GlobalDefines.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5141F826316E94006D65AE /* GlobalDefines.swift */; };
-		DD5141FB26318411006D65AE /* LocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5141FA26318411006D65AE /* LocalNotification.swift */; };
-		DD514203263276A1006D65AE /* TranslateBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD514202263276A1006D65AE /* TranslateBridge.swift */; };
-		DD5C09C026302F9C0065CFDE /* HWCloudLinkEngine+Conference.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5C09B326302F9C0065CFDE /* HWCloudLinkEngine+Conference.m */; };
-		DD5C09C126302F9C0065CFDE /* HWCloudLinkEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5C09B426302F9C0065CFDE /* HWCloudLinkEngine.m */; };
 		DD5C09C226302F9C0065CFDE /* HWMeetingHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5C09B626302F9C0065CFDE /* HWMeetingHandler.m */; };
-		DD5C09C326302F9C0065CFDE /* HWJoinMeetingController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5C09BA26302F9C0065CFDE /* HWJoinMeetingController.m */; };
-		DD5C09C426302F9C0065CFDE /* HWCloudLinkEngine+Login.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5C09BD26302F9C0065CFDE /* HWCloudLinkEngine+Login.m */; };
-		DD5C09C526302F9C0065CFDE /* HWCloudLinkEngine+CallService.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5C09BE26302F9C0065CFDE /* HWCloudLinkEngine+CallService.m */; };
-		DD5C09C626302F9C0065CFDE /* HWCreateMeetingController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5C09BF26302F9C0065CFDE /* HWCreateMeetingController.m */; };
 		DD989A002626E1EA0052EA76 /* fm_btn_close.png in Resources */ = {isa = PBXBuildFile; fileRef = DD9899FF2626E1EA0052EA76 /* fm_btn_close.png */; };
-		DD989A062626E6840052EA76 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = DD989A042626E6840052EA76 /* UINavigationController+FDFullscreenPopGesture.m */; };
 		DD989A0D2627E2150052EA76 /* btn_meeting_click.png in Resources */ = {isa = PBXBuildFile; fileRef = DD989A072627E2140052EA76 /* btn_meeting_click.png */; };
 		DD989A0E2627E2150052EA76 /* btn_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = DD989A082627E2140052EA76 /* btn_normal.png */; };
 		DD989A0F2627E2150052EA76 /* btn_meeting_click@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD989A092627E2140052EA76 /* btn_meeting_click@2x.png */; };
@@ -1659,8 +1659,25 @@
 		DA7123B025CD1EE600DB5825 /* UIColor+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
 		DA7123B125CD1EE600DB5825 /* UIColor+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
 		DAA9731025D1643200A9E5E7 /* JoinMeetingHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinMeetingHistoryViewController.swift; sourceTree = "<group>"; };
-		DD5141DD26312B82006D65AE /* JDMeetingBaseHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JDMeetingBaseHandler.h; sourceTree = "<group>"; };
-		DD5141DE26312B82006D65AE /* JDMeetingBaseHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JDMeetingBaseHandler.m; sourceTree = "<group>"; };
+		DD509C3C263966400023E162 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
+		DD509C3D263966400023E162 /* JDMeetingBaseHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDMeetingBaseHandler.h; sourceTree = "<group>"; };
+		DD509C3E263966400023E162 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
+		DD509C3F263966400023E162 /* JDMeetingBaseHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDMeetingBaseHandler.m; sourceTree = "<group>"; };
+		DD509C43263967070023E162 /* HWJoinMeetingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWJoinMeetingController.h; sourceTree = "<group>"; };
+		DD509C44263967070023E162 /* HWCreateMeetingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWCreateMeetingController.h; sourceTree = "<group>"; };
+		DD509C45263967070023E162 /* HWJoinMeetingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWJoinMeetingController.m; sourceTree = "<group>"; };
+		DD509C46263967070023E162 /* HWCreateMeetingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWCreateMeetingController.m; sourceTree = "<group>"; };
+		DD509C48263967080023E162 /* HWCloudLinkEngine+Conference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HWCloudLinkEngine+Conference.m"; sourceTree = "<group>"; };
+		DD509C49263967080023E162 /* HWCloudLinkEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWCloudLinkEngine.m; sourceTree = "<group>"; };
+		DD509C4A263967080023E162 /* HWCloudLinkEngine+Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HWCloudLinkEngine+Login.h"; sourceTree = "<group>"; };
+		DD509C4B263967080023E162 /* HWCloudLinkEngine+CallService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HWCloudLinkEngine+CallService.h"; sourceTree = "<group>"; };
+		DD509C4C263967080023E162 /* HWCloudLinkEngine+Conference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HWCloudLinkEngine+Conference.h"; sourceTree = "<group>"; };
+		DD509C4D263967080023E162 /* HWCloudLinkEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWCloudLinkEngine.h; sourceTree = "<group>"; };
+		DD509C4E263967080023E162 /* HWCloudLinkEngine+Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HWCloudLinkEngine+Login.m"; sourceTree = "<group>"; };
+		DD509C4F263967080023E162 /* HWCloudLinkEngine+CallService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HWCloudLinkEngine+CallService.m"; sourceTree = "<group>"; };
+		DD509C51263967080023E162 /* TranslateBridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslateBridge.swift; sourceTree = "<group>"; };
+		DD509C52263967080023E162 /* LocalNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotification.swift; sourceTree = "<group>"; };
+		DD509C53263967080023E162 /* GlobalDefines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalDefines.swift; sourceTree = "<group>"; };
 		DD5141E026314CDE006D65AE /* Icon_Nb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_Nb.png; sourceTree = "<group>"; };
 		DD5141E126314CDE006D65AE /* Icon_Nb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon_Nb@2x.png"; sourceTree = "<group>"; };
 		DD5141E226314CDE006D65AE /* Icon_Nb@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon_Nb@3x.png"; sourceTree = "<group>"; };
@@ -1673,26 +1690,9 @@
 		DD5141E926314CDF006D65AE /* btn_meeting_click_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_meeting_click_off@2x.png"; sourceTree = "<group>"; };
 		DD5141EA26314CDF006D65AE /* btn_meeting_click_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_meeting_click_off.png; sourceTree = "<group>"; };
 		DD5141EB26314CDF006D65AE /* ic_bianji@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_bianji@3x.png"; sourceTree = "<group>"; };
-		DD5141F826316E94006D65AE /* GlobalDefines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalDefines.swift; sourceTree = "<group>"; };
-		DD5141FA26318411006D65AE /* LocalNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotification.swift; sourceTree = "<group>"; };
-		DD514202263276A1006D65AE /* TranslateBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateBridge.swift; sourceTree = "<group>"; };
-		DD5C09B226302F9C0065CFDE /* HWJoinMeetingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWJoinMeetingController.h; sourceTree = "<group>"; };
-		DD5C09B326302F9C0065CFDE /* HWCloudLinkEngine+Conference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HWCloudLinkEngine+Conference.m"; sourceTree = "<group>"; };
-		DD5C09B426302F9C0065CFDE /* HWCloudLinkEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWCloudLinkEngine.m; sourceTree = "<group>"; };
-		DD5C09B526302F9C0065CFDE /* HWCloudLinkEngine+Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HWCloudLinkEngine+Login.h"; sourceTree = "<group>"; };
 		DD5C09B626302F9C0065CFDE /* HWMeetingHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWMeetingHandler.m; sourceTree = "<group>"; };
-		DD5C09B726302F9C0065CFDE /* HWCreateMeetingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWCreateMeetingController.h; sourceTree = "<group>"; };
-		DD5C09B826302F9C0065CFDE /* HWCloudLinkEngine+CallService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HWCloudLinkEngine+CallService.h"; sourceTree = "<group>"; };
-		DD5C09B926302F9C0065CFDE /* HWCloudLinkEngine+Conference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HWCloudLinkEngine+Conference.h"; sourceTree = "<group>"; };
-		DD5C09BA26302F9C0065CFDE /* HWJoinMeetingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWJoinMeetingController.m; sourceTree = "<group>"; };
-		DD5C09BB26302F9C0065CFDE /* HWCloudLinkEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWCloudLinkEngine.h; sourceTree = "<group>"; };
 		DD5C09BC26302F9C0065CFDE /* HWMeetingHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWMeetingHandler.h; sourceTree = "<group>"; };
-		DD5C09BD26302F9C0065CFDE /* HWCloudLinkEngine+Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HWCloudLinkEngine+Login.m"; sourceTree = "<group>"; };
-		DD5C09BE26302F9C0065CFDE /* HWCloudLinkEngine+CallService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HWCloudLinkEngine+CallService.m"; sourceTree = "<group>"; };
-		DD5C09BF26302F9C0065CFDE /* HWCreateMeetingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWCreateMeetingController.m; sourceTree = "<group>"; };
 		DD9899FF2626E1EA0052EA76 /* fm_btn_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fm_btn_close.png; sourceTree = "<group>"; };
-		DD989A042626E6840052EA76 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
-		DD989A052626E6840052EA76 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
 		DD989A072627E2140052EA76 /* btn_meeting_click.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_meeting_click.png; sourceTree = "<group>"; };
 		DD989A082627E2140052EA76 /* btn_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_normal.png; sourceTree = "<group>"; };
 		DD989A092627E2140052EA76 /* btn_meeting_click@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_meeting_click@2x.png"; sourceTree = "<group>"; };
@@ -3740,28 +3740,62 @@
 			path = Authorizations;
 			sourceTree = "<group>";
 		};
+		DD509C3B263966400023E162 /* existed */ = {
+			isa = PBXGroup;
+			children = (
+				DD509C3C263966400023E162 /* UINavigationController+FDFullscreenPopGesture.h */,
+				DD509C3E263966400023E162 /* UINavigationController+FDFullscreenPopGesture.m */,
+				DD509C3D263966400023E162 /* JDMeetingBaseHandler.h */,
+				DD509C3F263966400023E162 /* JDMeetingBaseHandler.m */,
+			);
+			path = existed;
+			sourceTree = "<group>";
+		};
+		DD509C42263967070023E162 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				DD509C43263967070023E162 /* HWJoinMeetingController.h */,
+				DD509C44263967070023E162 /* HWCreateMeetingController.h */,
+				DD509C45263967070023E162 /* HWJoinMeetingController.m */,
+				DD509C46263967070023E162 /* HWCreateMeetingController.m */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		DD509C47263967080023E162 /* engine */ = {
+			isa = PBXGroup;
+			children = (
+				DD509C48263967080023E162 /* HWCloudLinkEngine+Conference.m */,
+				DD509C49263967080023E162 /* HWCloudLinkEngine.m */,
+				DD509C4A263967080023E162 /* HWCloudLinkEngine+Login.h */,
+				DD509C4B263967080023E162 /* HWCloudLinkEngine+CallService.h */,
+				DD509C4C263967080023E162 /* HWCloudLinkEngine+Conference.h */,
+				DD509C4D263967080023E162 /* HWCloudLinkEngine.h */,
+				DD509C4E263967080023E162 /* HWCloudLinkEngine+Login.m */,
+				DD509C4F263967080023E162 /* HWCloudLinkEngine+CallService.m */,
+			);
+			path = engine;
+			sourceTree = "<group>";
+		};
+		DD509C50263967080023E162 /* other */ = {
+			isa = PBXGroup;
+			children = (
+				DD509C51263967080023E162 /* TranslateBridge.swift */,
+				DD509C52263967080023E162 /* LocalNotification.swift */,
+				DD509C53263967080023E162 /* GlobalDefines.swift */,
+			);
+			path = other;
+			sourceTree = "<group>";
+		};
 		DD5C09B126302F9C0065CFDE /* other */ = {
 			isa = PBXGroup;
 			children = (
-				DD514202263276A1006D65AE /* TranslateBridge.swift */,
-				DD5141F826316E94006D65AE /* GlobalDefines.swift */,
-				DD5141FA26318411006D65AE /* LocalNotification.swift */,
-				DD5141DD26312B82006D65AE /* JDMeetingBaseHandler.h */,
-				DD5141DE26312B82006D65AE /* JDMeetingBaseHandler.m */,
 				DD5C09BC26302F9C0065CFDE /* HWMeetingHandler.h */,
 				DD5C09B626302F9C0065CFDE /* HWMeetingHandler.m */,
-				DD5C09B726302F9C0065CFDE /* HWCreateMeetingController.h */,
-				DD5C09BF26302F9C0065CFDE /* HWCreateMeetingController.m */,
-				DD5C09B226302F9C0065CFDE /* HWJoinMeetingController.h */,
-				DD5C09BA26302F9C0065CFDE /* HWJoinMeetingController.m */,
-				DD5C09BB26302F9C0065CFDE /* HWCloudLinkEngine.h */,
-				DD5C09B426302F9C0065CFDE /* HWCloudLinkEngine.m */,
-				DD5C09B526302F9C0065CFDE /* HWCloudLinkEngine+Login.h */,
-				DD5C09BD26302F9C0065CFDE /* HWCloudLinkEngine+Login.m */,
-				DD5C09B926302F9C0065CFDE /* HWCloudLinkEngine+Conference.h */,
-				DD5C09B326302F9C0065CFDE /* HWCloudLinkEngine+Conference.m */,
-				DD5C09B826302F9C0065CFDE /* HWCloudLinkEngine+CallService.h */,
-				DD5C09BE26302F9C0065CFDE /* HWCloudLinkEngine+CallService.m */,
+				DD509C42263967070023E162 /* ui */,
+				DD509C47263967080023E162 /* engine */,
+				DD509C50263967080023E162 /* other */,
+				DD509C3B263966400023E162 /* existed */,
 			);
 			path = other;
 			sourceTree = "<group>";
@@ -3787,8 +3821,6 @@
 				DD989A082627E2140052EA76 /* btn_normal.png */,
 				DD989A0A2627E2140052EA76 /* btn_normal@2x.png */,
 				DD989A0B2627E2150052EA76 /* btn_normal@3x.png */,
-				DD989A052626E6840052EA76 /* UINavigationController+FDFullscreenPopGesture.h */,
-				DD989A042626E6840052EA76 /* UINavigationController+FDFullscreenPopGesture.m */,
 				DD9899FF2626E1EA0052EA76 /* fm_btn_close.png */,
 			);
 			path = png;
@@ -4363,20 +4395,22 @@
 				7F5A3F42257F992E005EE3AC /* CreatMeetingThreeVersionViewController.swift in Sources */,
 				677367D9241908B400FEF34E /* JoinUsersViewController.swift in Sources */,
 				53238D7E2580F45D00CA2D27 /* MyMeetingTwoSMCTableViewCell.swift in Sources */,
+				DD509C40263966400023E162 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				6732A8A02417639D00E41093 /* TableImageTextNormalCell.swift in Sources */,
 				67A854B02416138E00714CBA /* CustomTabBarViewController.swift in Sources */,
 				AE647176256D2A4D00E9E329 /* CLImagePickerAnotherViewController.swift in Sources */,
+				DD509C54263967080023E162 /* HWJoinMeetingController.m in Sources */,
 				AE647167256D2A4D00E9E329 /* CLImagePickersViewController.swift in Sources */,
 				046BA15424AF1251004BFE01 /* SuspendWindow.swift in Sources */,
 				677367DC241910EE00FEF34E /* TableSearchAttendeeCell.swift in Sources */,
 				AE7D123A2578FD59002E7E2F /* String+Session.swift in Sources */,
+				DD509C5A263967080023E162 /* TranslateBridge.swift in Sources */,
 				AE64EF2825664B56002B075E /* NSData+Base64.m in Sources */,
 				67A8545F2415F2C600714CBA /* MBProgressHUD+New.m in Sources */,
 				AE64EF2625664B56002B075E /* UIView+Extension.m in Sources */,
 				6FF9BD7424DEBC9300C510C3 /* SuspendVideoWindow.swift in Sources */,
 				1F3D81D724C809800085FD48 /* UserSettingBusiness.swift in Sources */,
 				D6F349ED25EFB6A4004D161A /* CCPAlertPlugin.swift in Sources */,
-				DD5C09C426302F9C0065CFDE /* HWCloudLinkEngine+Login.m in Sources */,
 				678D300F2449919A00562707 /* SingalHeaderFooterView.swift in Sources */,
 				046BA15224AF1251004BFE01 /* SuspendTool.swift in Sources */,
 				39F6788124C1541D0008F9B0 /* FeedBackAnswerViewController.swift in Sources */,
@@ -4394,11 +4428,11 @@
 				671DA44624165CC20030135F /* TableImageTextNextCell.swift in Sources */,
 				AE64F02B25664E42002B075E /* ECConfInfo.m in Sources */,
 				678D300C24498EBF00562707 /* TableSingalSevenCell.swift in Sources */,
+				DD509C57263967080023E162 /* HWCloudLinkEngine.m in Sources */,
 				C8FEEE6B259DE1B100B99B27 /* MeetingInfoSecretCell.swift in Sources */,
 				67A854A82416036E00714CBA /* SessionViewController.swift in Sources */,
 				D6F349EF25EFB6A4004D161A /* ContactAuthorization.swift in Sources */,
 				7FBD6F1B25972905007B964E /* MeetingSetViewController.swift in Sources */,
-				DD5C09C326302F9C0065CFDE /* HWJoinMeetingController.m in Sources */,
 				6734733624161EAF00FCE9DB /* NewPwdViewController.swift in Sources */,
 				7FAB218225667C1300C20D67 /* UIColorExtensionFile.swift in Sources */,
 				D6F349EE25EFB6A4004D161A /* MicrophoneAutnorization.swift in Sources */,
@@ -4432,7 +4466,6 @@
 				AE647134256D2A4C00E9E329 /* DrawBoard.swift in Sources */,
 				67FE42942418CA2D00BA008C /* MeetAdvanceSetViewController.swift in Sources */,
 				8BE0893925AC4EA200C0F59A /* SettingAdvancedViewController.swift in Sources */,
-				DD514203263276A1006D65AE /* TranslateBridge.swift in Sources */,
 				678D30032449828600562707 /* AlertTableSingalViewController.swift in Sources */,
 				046BA15524AF1251004BFE01 /* UIViewController+FF.swift in Sources */,
 				AE64EFFB25664E03002B075E /* VoiceStream.m in Sources */,
@@ -4490,25 +4523,24 @@
 				674B2DE524178B3E003751AF /* TableTitlePortraitCell.swift in Sources */,
 				04FDE7AA24B6CCD1008C0556 /* NumberKeyboardController.swift in Sources */,
 				677367D72419040400FEF34E /* PreMeetingAttendeeViewController.swift in Sources */,
+				DD509C5B263967080023E162 /* LocalNotification.swift in Sources */,
 				6701BBE72418755D00A7B44C /* AnswerPhoneViewController.swift in Sources */,
 				AE64716D256D2A4D00E9E329 /* EditorViewController.swift in Sources */,
-				DD5141FB26318411006D65AE /* LocalNotification.swift in Sources */,
 				AE64F03125664E42002B075E /* ConfAttendeeInConf.m in Sources */,
 				6732A8A42417686800E41093 /* AddLocalContactViewController.swift in Sources */,
 				D62F852C259DB33600FC7477 /* YBTimer.m in Sources */,
 				04CC653F25A8019200470E41 /* NSObject+SwizzleMethod.m in Sources */,
 				677367C12418D99F00FEF34E /* VideoCollectionView.swift in Sources */,
+				DD509C41263966400023E162 /* JDMeetingBaseHandler.m in Sources */,
 				AE64EFE725664DF3002B075E /* CallService.mm in Sources */,
 				AE64F01325664E32002B075E /* ConferenceService.mm in Sources */,
 				6785B39F241A21340023F8F0 /* CommonValueTextmodel.swift in Sources */,
 				53E63383257A390B005E4AE7 /* SVCMeetFourEAGLViewCell.swift in Sources */,
 				AE64EF5325664B6E002B075E /* ListenTypeChageAble.swift in Sources */,
-				DD5C09C026302F9C0065CFDE /* HWCloudLinkEngine+Conference.m in Sources */,
 				AE64EF2025664B56002B075E /* UIView+borderLine.m in Sources */,
 				AE64EF1825664B56002B075E /* UILabel+CZFTools.m in Sources */,
 				D64041392591CAA600EB7125 /* BackGroudActive.m in Sources */,
 				6732A8A724176BA500E41093 /* TableNameFieldCell.swift in Sources */,
-				DD5141DF26312B82006D65AE /* JDMeetingBaseHandler.m in Sources */,
 				8B438E7525AE940800C73D65 /* HistoryAccounts.swift in Sources */,
 				AE64713B256D2A4C00E9E329 /* RectangleBrush.swift in Sources */,
 				2BE48BCF2595DABC00614378 /* MyMeetingListViewController.swift in Sources */,
@@ -4538,7 +4570,7 @@
 				AE64F03225664E42002B075E /* ConfAttendee+StructParase.m in Sources */,
 				6785B3A8241A21760023F8F0 /* UserModel.swift in Sources */,
 				6701BBDC2418752E00A7B44C /* TableMeetingListTextCell.swift in Sources */,
-				DD5C09C126302F9C0065CFDE /* HWCloudLinkEngine.m in Sources */,
+				DD509C55263967080023E162 /* HWCreateMeetingController.m in Sources */,
 				6743B0D72446AFAA00E03306 /* TableLeftTitleRightSubTitleCell.swift in Sources */,
 				AE64712B256D2A4C00E9E329 /* MessageStyleView.swift in Sources */,
 				AE64EFE425664DD2002B075E /* ContactService.m in Sources */,
@@ -4562,6 +4594,7 @@
 				6701BBE92418755D00A7B44C /* VideoViewController.swift in Sources */,
 				6785B3C7241A329E0023F8F0 /* MJFoundation.m in Sources */,
 				AE64F04925664E8E002B075E /* LoginInfo.mm in Sources */,
+				DD509C56263967080023E162 /* HWCloudLinkEngine+Conference.m in Sources */,
 				D6F349E625EFB6A4004D161A /* BluetoothAuthorization.swift in Sources */,
 				67D19C7524206F0C007DCBF1 /* Reachability.m in Sources */,
 				C8B699BE25958D6C0095449F /* UpgradeManager.swift in Sources */,
@@ -4598,13 +4631,13 @@
 				674917882434BED600E0CD6E /* CollectionImageTopTextCell.swift in Sources */,
 				67A854AA2416037E00714CBA /* ContactViewController.swift in Sources */,
 				AE64EF9E25664B7E002B075E /* LogFormatter.swift in Sources */,
+				DD509C59263967080023E162 /* HWCloudLinkEngine+CallService.m in Sources */,
 				382E4582241F6CCB002AED31 /* DBManager.swift in Sources */,
 				53C29A02258357D10001B49C /* MeetingDetailAttItemCollectionViewCell.swift in Sources */,
 				AE5D8E582576196000968EAC /* VoiceMeetingViewController.swift in Sources */,
 				382E457C241F6BEA002AED31 /* FMDatabase.m in Sources */,
 				53238D892581BFF100CA2D27 /* MeetingDetailTableViewCell.swift in Sources */,
 				6785B399241A21340023F8F0 /* CommonModel.swift in Sources */,
-				DD5C09C626302F9C0065CFDE /* HWCreateMeetingController.m in Sources */,
 				67CB8330243B054800924CC5 /* ViewDateTimePickerController.swift in Sources */,
 				6734734824164A2000FCE9DB /* TableHeaderFooterTextCell.swift in Sources */,
 				6785B3CB241A329E0023F8F0 /* MJPropertyType.m in Sources */,
@@ -4653,7 +4686,6 @@
 				AE64EF1E25664B56002B075E /* DeviceTool.m in Sources */,
 				AE647181256D2A4D00E9E329 /* CLSingleTypeCell.swift in Sources */,
 				C8FEEE6A259DE1B100B99B27 /* MeetingInfoViewController.swift in Sources */,
-				DD989A062626E6840052EA76 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				382E4586241F8E9B002AED31 /* UserCallLogBusiness.swift in Sources */,
 				C8FEEE71259DE1CB00B99B27 /* MeetingInfoModel.swift in Sources */,
 				67D19C7824207758007DCBF1 /* RecentContactViewController.swift in Sources */,
@@ -4671,6 +4703,7 @@
 				53C88BFD2570F610001D2302 /* ContactInfo.m in Sources */,
 				DA7123B225CD1EE600DB5825 /* UIColor+Extension.m in Sources */,
 				04CC654025A8019200470E41 /* NSArray+ErrorHandle.m in Sources */,
+				DD509C5C263967080023E162 /* GlobalDefines.swift in Sources */,
 				AE64713A256D2A4C00E9E329 /* GaussianBlurBrush.swift in Sources */,
 				7F4CA27A25668C6600BA0ED9 /* MyselfHeaderView.swift in Sources */,
 				DD5C09C226302F9C0065CFDE /* HWMeetingHandler.m in Sources */,
@@ -4683,6 +4716,7 @@
 				677CCA142495061E00AB41FB /* WelcomeViewController.swift in Sources */,
 				2BE27139261C34FF00D31FE5 /* SimplePing.m in Sources */,
 				D62F852D259DB33600FC7477 /* mmps.c in Sources */,
+				DD509C58263967080023E162 /* HWCloudLinkEngine+Login.m in Sources */,
 				67012C7124124768004522C8 /* LoginViewController.swift in Sources */,
 				AE64F04A25664E8E002B075E /* CallInfo.mm in Sources */,
 				6F75FCCF24EA7E7E00C19C62 /* SearchAttendeeItemCollectionViewCell.swift in Sources */,
@@ -4715,7 +4749,6 @@
 				53238D8D2581C48800CA2D27 /* MeetingDetailAttendeesTableViewCell.swift in Sources */,
 				AE7D12382578ED00002E7E2F /* SessionHelper.swift in Sources */,
 				67A854AC2416038700714CBA /* MineViewController.swift in Sources */,
-				DD5141F926316E94006D65AE /* GlobalDefines.swift in Sources */,
 				D62F8556259DB42D00FC7477 /* NTESI420Frame.m in Sources */,
 				D62F8554259DB42D00FC7477 /* NTESVideoUtil.m in Sources */,
 				AE64F04225664E76002B075E /* ManagerService.m in Sources */,
@@ -4738,7 +4771,6 @@
 				7FAB218325667C1300C20D67 /* UIFontExtensionFile.swift in Sources */,
 				D6F349E825EFB6A4004D161A /* CCPAuthorization.swift in Sources */,
 				6735C7FD2424D57400454A19 /* MeetingTypeSetViewController.swift in Sources */,
-				DD5C09C526302F9C0065CFDE /* HWCloudLinkEngine+CallService.m in Sources */,
 				04411192249CAC8200C35639 /* EWDataPickerPresentAnimated.swift in Sources */,
 				AE64F00925664E16002B075E /* Initializer.m in Sources */,
 				DA6A6E3425E4FE6600F80A27 /* JailBrokenHelper.swift in Sources */,
